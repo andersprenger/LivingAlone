@@ -56,12 +56,12 @@
 		7121569C265C47A6002999DB /* LivingAlone */ = {
 			isa = PBXGroup;
 			children = (
+				FD35B615265C4A52006D1BF7 /* Back End */,
 				7121569D265C47A6002999DB /* LivingAloneApp.swift */,
 				7121569F265C47A6002999DB /* ContentView.swift */,
 				712156A1265C47A8002999DB /* Assets.xcassets */,
 				712156A6265C47A8002999DB /* Info.plist */,
 				712156A3265C47A8002999DB /* Preview Content */,
-				FD35B611265C49F4006D1BF7 /* BigTopicsModel.swift */,
 				FD35B613265C4A1B006D1BF7 /* Inicio.swift */,
 			);
 			path = LivingAlone;
@@ -73,6 +73,14 @@
 				712156A4265C47A8002999DB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FD35B615265C4A52006D1BF7 /* Back End */ = {
+			isa = PBXGroup;
+			children = (
+				FD35B611265C49F4006D1BF7 /* BigTopicsModel.swift */,
+			);
+			path = "Back End";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
