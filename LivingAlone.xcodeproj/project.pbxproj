@@ -13,6 +13,8 @@
 		712156A5265C47A8002999DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712156A4265C47A8002999DB /* Preview Assets.xcassets */; };
 		FD35B612265C49F4006D1BF7 /* BigTopicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD35B611265C49F4006D1BF7 /* BigTopicsModel.swift */; };
 		FD35B614265C4A1B006D1BF7 /* Inicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD35B613265C4A1B006D1BF7 /* Inicio.swift */; };
+		FD35B61B265D662B006D1BF7 /* SubCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD35B61A265D662B006D1BF7 /* SubCategories.swift */; };
+		FD35B61D265D663C006D1BF7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD35B61C265D663C006D1BF7 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		712156A6265C47A8002999DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD35B611265C49F4006D1BF7 /* BigTopicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTopicsModel.swift; sourceTree = "<group>"; };
 		FD35B613265C4A1B006D1BF7 /* Inicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inicio.swift; sourceTree = "<group>"; };
+		FD35B61A265D662B006D1BF7 /* SubCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategories.swift; sourceTree = "<group>"; };
+		FD35B61C265D663C006D1BF7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				FD35B611265C49F4006D1BF7 /* BigTopicsModel.swift */,
+				FD35B61A265D662B006D1BF7 /* SubCategories.swift */,
+				FD35B61C265D663C006D1BF7 /* Item.swift */,
 			);
 			path = "Back End";
 			sourceTree = "<group>";
@@ -153,8 +159,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				712156A0265C47A6002999DB /* ContentView.swift in Sources */,
+				FD35B61B265D662B006D1BF7 /* SubCategories.swift in Sources */,
 				FD35B612265C49F4006D1BF7 /* BigTopicsModel.swift in Sources */,
 				FD35B614265C4A1B006D1BF7 /* Inicio.swift in Sources */,
+				FD35B61D265D663C006D1BF7 /* Item.swift in Sources */,
 				7121569E265C47A6002999DB /* LivingAloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
