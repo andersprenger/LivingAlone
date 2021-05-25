@@ -10,7 +10,7 @@ import SwiftUI
 struct Inicio: View {
     var allBigTopics : [BigTopicsModel]  = BigTopicsModel.bigTopicsArray
 //    init() {
-//        
+//
 //           UISegmentedControl.appearance().selectedSegmentTintColor = .systemOrange
 //           UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
 //           UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
@@ -20,7 +20,7 @@ struct Inicio: View {
         NavigationView{
         VStack{
             
-                ScrollView(.horizontal){
+               
                     HStack{
                         ForEach(allBigTopics, id:\.id) {topic in
                             NavigationLink(
@@ -34,7 +34,7 @@ struct Inicio: View {
                         
                     }
                 }.padding()
-            }
+            
                 ScrollView {
                     VStack {
                         ForEach(allBigTopics, id:\.id) {topic in
