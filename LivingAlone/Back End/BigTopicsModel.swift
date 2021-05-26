@@ -17,23 +17,23 @@ class BigTopicsModel: ObservableObject, Hashable, Identifiable{
     var id: UUID = UUID()
     
     static var bigTopicsArray : [BigTopicsModel] = {
-        let mock1 = BigTopicsModel(name: "Alimentação")
+        let mock1 = BigTopicsModel(name: "Alimentação", cor: UIColor.systemOrange)
         mock1.subCategories = SubCategorie.Alimentação
-        mock1.color = UIColor.systemOrange
-        let mock2 = BigTopicsModel(name: "Limpeza")
+        
+        let mock2 = BigTopicsModel(name: "Limpeza", cor: UIColor.systemBlue)
         mock2.subCategories = SubCategorie.Alimentação//!!!!!
-        mock2.color = UIColor.systemBlue
-        let mock3 = BigTopicsModel(name: "Organização")
+        
+        let mock3 = BigTopicsModel(name: "Organização", cor: UIColor.systemYellow)
         mock3.subCategories = SubCategorie.Alimentação//!!!!!
-        mock3.color = UIColor.systemYellow
+        
         return [mock1,mock2,mock3]
     }()
     
     
-    init(name: String) {
+    init(name: String, cor : UIColor) {
         self.name = name
         self.subCategories = []
-        self.color = UIColor.purple
+        self.color = cor
     }
     
     

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItemOfCategoryView: View {
     var item : Item
-    var cor : UIColor
+    var cor : Color
     var body: some View {
         
         
@@ -31,7 +31,7 @@ struct ItemOfCategoryView: View {
         }
         .frame(width: UIScreen.main.bounds.width*0.897, height:UIScreen.main.bounds.height*0.1575,alignment: .center)
         .background(RoundedRectangle(cornerRadius: 13)
-        .foregroundColor(Color(.systemBlue)))
+        .foregroundColor(cor))
         .padding(.horizontal,UIScreen.main.bounds.width*0.1)
         
         
@@ -43,6 +43,6 @@ struct ItemOfCategoryView: View {
 
 struct ItemOfCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemOfCategoryView(item: Item.cafeDaManha[0], cor: BigTopicsModel.bigTopicsArray[0].color)
+        ItemOfCategoryView(item: Item.cafeDaManha[0], cor: Color(BigTopicsModel.bigTopicsArray[0].color))
     }
 }

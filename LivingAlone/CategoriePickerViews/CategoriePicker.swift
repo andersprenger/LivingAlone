@@ -16,62 +16,44 @@ struct CategoriePicker: View {
     
     var body: some View {
         
-//        GeometryReader{ geometry in
-            
+        
+        
         
         VStack{
             Text(currentBigTopic.name).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).bold()
             ScrollView(.horizontal, showsIndicators: false){
-            Picker(selection: $pickerSelection, label: Text("")) {
-                
-                ForEach(0..<currentBigTopic.subCategories.count){
+                Picker(selection: $pickerSelection, label: Text("")) {
                     
-                    Text(currentBigTopic.subCategories[$0].name).tag($0)
+                    ForEach(0..<currentBigTopic.subCategories.count){
+                        
+                        Text(currentBigTopic.subCategories[$0].name).tag($0)
+                        
+                        
+                    }
                     
-                    
-             }
-            
-            }.pickerStyle(SegmentedPickerStyle()).padding(.top).padding(.bottom)
-           }.padding()
+                }.pickerStyle(SegmentedPickerStyle()).padding(.top).padding(.bottom)
+            }.padding()
             
             
             ScrollView{
                 VStack{
                     ForEach(currentBigTopic.subCategories[pickerSelection].items, id:\.id){ item in
                         
-                        ItemOfCategoryView(item: item, cor: currentBigTopic.color).padding(.vertical, 1)
-                        
+                        ItemOfCategoryView(item: item, cor: Color( currentBigTopic.color)).padding(.vertical, 1)
                         
                     }
                 }
-                
             }
-            
-            
         }.onAppear{
-            
-//                if currentBigTopic.name == "Alimentação"{
-                    UISegmentedControl.appearance().selectedSegmentTintColor = currentBigTopic.color
-//               }
-//              else  if currentBigTopic.name == "Limpeza"{
-//                    UISegmentedControl.appearance().selectedSegmentTintColor = .systemBlue
-//              }
-//              else{
-//                UISegmentedControl.appearance().selectedSegmentTintColor = .systemYellow
-//
-//
-//              }
-                    
+            UISegmentedControl.appearance().selectedSegmentTintColor = currentBigTopic.color
         }
-//           }
-        }
-    
+    }
 }
 
 
-    struct CategoriePicker_Previews: PreviewProvider {
-        static var previews: some View {
-            CategoriePicker(currentBigTopic: BigTopicsModel.bigTopicsArray[0], currentSubCategory:BigTopicsModel.bigTopicsArray[0].subCategories[0]  )
-        }
+struct CategoriePicker_Previews: PreviewProvider {
+    static var previews: some View {
+        CategoriePicker(currentBigTopic: BigTopicsModel.bigTopicsArray[0], currentSubCategory:BigTopicsModel.bigTopicsArray[0].subCategories[0]  )
     }
+}
 
