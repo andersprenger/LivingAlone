@@ -9,13 +9,11 @@ import SwiftUI
 
 struct Inicio: View {
     var allBigTopics : [BigTopicsModel]  = BigTopicsModel.bigTopicsArray
-//    init() {
-//
-//           UISegmentedControl.appearance().selectedSegmentTintColor = .systemOrange
-//           UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-//           UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
-//           UISegmentedControl.appearance().backgroundColor = .white
-//       }
+    init() {
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
+            UISegmentedControl.appearance().backgroundColor = .white
+    }
     var body: some View {
         NavigationView{
         VStack{
@@ -24,13 +22,16 @@ struct Inicio: View {
                     HStack{
                         ForEach(allBigTopics, id:\.id) {topic in
                             NavigationLink(
-                                destination: CategoriePicker(currentBigTopic: topic, currentSubCategory: topic.subCategories[0])   ){  VStack{
+                                destination: CategoriePicker(currentBigTopic: topic, currentSubCategory: topic.subCategories[0])   ){
+                                VStack{
                                 
                                 RoundedRectangle(cornerRadius: 25, style: .continuous).frame(width: 101, height: 66, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 Text(topic.name)
                             }
-                            
-                            }
+                               
+                                
+                                }
+                           
                         
                     }
                 }.padding()

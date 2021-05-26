@@ -16,7 +16,11 @@ struct CategoriePicker: View {
     
     var body: some View {
         
+//        GeometryReader{ geometry in
+            
+        
         VStack{
+            Text(currentBigTopic.name).font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).bold()
             ScrollView(.horizontal, showsIndicators: false){
             Picker(selection: $pickerSelection, label: Text("")) {
                 
@@ -35,7 +39,7 @@ struct CategoriePicker: View {
                 VStack{
                     ForEach(currentBigTopic.subCategories[pickerSelection].items, id:\.id){ item in
                         
-                        Text(item.name)
+                        ItemOfCategoryView(item: item, cor: currentBigTopic.color).padding(.vertical, 1)
                         
                         
                     }
@@ -44,10 +48,26 @@ struct CategoriePicker: View {
             }
             
             
+        }.onAppear{
+            
+//                if currentBigTopic.name == "Alimentação"{
+                    UISegmentedControl.appearance().selectedSegmentTintColor = currentBigTopic.color
+//               }
+//              else  if currentBigTopic.name == "Limpeza"{
+//                    UISegmentedControl.appearance().selectedSegmentTintColor = .systemBlue
+//              }
+//              else{
+//                UISegmentedControl.appearance().selectedSegmentTintColor = .systemYellow
+//
+//
+//              }
+                    
         }
-    }
+//           }
+        }
     
 }
+
 
     struct CategoriePicker_Previews: PreviewProvider {
         static var previews: some View {
