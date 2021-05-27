@@ -15,37 +15,238 @@ class Item: ObservableObject, Hashable, Identifiable{
     @Published var name : String
     @Published var description : String
     @Published var time : Int
+    @Published var ingredients : [String]
+    @Published var portion : Int
+    @Published var veg : Bool
     
     var id: UUID = UUID()
     
     
     static var cafeDaManha: [Item] = {
         let mock1 = Item(name: "Panqueca Americana")
+        mock1.ingredients[0] = "1 e 1/4 xícara (chá) de farinha de trigo"
+        mock1.ingredients[1] = "1 colher (sopa) de açúcar"
+        mock1.ingredients.append("3 colheres (chá) de fermento em pó")
+        mock1.ingredients.append("2 ovos levemente batidos")
+        mock1.ingredients.append("1 xícara (chá) de leite")
+        mock1.ingredients.append("2 colheres (sopa) de manteiga derretida")
+        mock1.ingredients.append("pitada de sal")
+        mock1.ingredients.append("óleo")
+        
         mock1.description = "Misture em um recipiente: a farinha, o açúcar, o fermento e o sal. Em outro recipiente, misture os ovos, o leite e a manteiga. Acrescente os líquidos aos secos, sem misturar em excesso. O ponto da massa não deve ser muito líquido, deve escorrer lentamente. Aqueça e unte a frigideira com óleo, coloque a massa no centro, cerca de 1/4 xícara por panqueca.Vire a massa para assar do outro lado e está pronto! "
         mock1.time = 40
-        let mock2 = Item(name: "Ovos")
-        let mock3 = Item(name: "Crepioca")
-        let mock4 = Item(name: "Torrada")
+        mock1.portion = 8
         
-        return [mock1,mock2,mock3,mock4]
+        let mock2 = Item(name: "Omelete")
+        mock2.ingredients.append("2 ovos")
+        mock2.ingredients.append("1 pitada de sal")
+        mock2.ingredients.append("1 fatia de presunto")
+        mock2.ingredients.append("2 fatias de queijo")
+        mock2.ingredients.append("tempero verde a gosto")
+        mock2.ingredients.append("caldo de galinha a gosto")
+       
+        mock2.description = "Bata os 2 ovos, pode ser na batedeira ou não. Após ter batido bem, coloque-o na frigideira já untada com óleo, acrescente o sal, o presunto picado em quadradinhos e as duas fatias de queijo (não precisa picar o queijo). Coloque os temperos a gosto, espere ficar firme, e vire o omelete. Está pronto um omelete delicioso, bom apetite!"
+        mock2.time = 4
+        mock2.portion = 1
+        
+        let mock3 = Item(name: "Mingau")
+        mock3.ingredients.append("1 colher (sopa) farelo de aveia")
+        mock3.ingredients.append("1 colher (sopa) aveia em flocos")
+        mock3.ingredients.append("1 xícara (chá) leite a sua escolha")
+        mock3.ingredients.append("1 Banana")
+        mock3.ingredients.append("1 colher (chá) baunilha essência")
+        mock3.ingredients.append("1 colher (chá) adoçante")
+        mock3.ingredients.append("1 colher (chá) canela")
+        
+        mock3.description = "Em uma panela, aqueça o leite e coloque o farelo e a aveia em flocos.Mexa até engrossar. Desligue o fogo e acrescente a essência de baunilha e o adoçante. Corte 3 rodelas de banana e separe. Amasse o restante da banana e acrescente ao mingau. Sirva em um recipiente, polvilhe canela e enfeite com as rodelas de banana."
+        mock3.time = 15
+        mock3.portion = 1
+        mock3.veg = true
+        
+        let mock4 = Item(name: "Muffin de Banana")
+        mock4.ingredients.append("1 e 1/2 xícaras de farinha de trigo peneirada")
+        mock4.ingredients.append("1 colher (chá) de bicarbonato de sódio")
+        mock4.ingredients.append("1 colher (chá) de fermento em pó")
+        mock4.ingredients.append("1/2 colher (chá) de sal")
+        mock4.ingredients.append("3 bananas (grandes) amassadas (purê)")
+        mock4.ingredients.append("3/4 xícara de açúcar refinado")
+        mock4.ingredients.append("1 ovo levemente batido")
+        mock4.ingredients.append("1/3 xícara de manteiga sem sal derretida")
+        mock4.ingredients.append("1/3 xícara de açúcar demerara")
+        mock4.ingredients.append("2 colheres (sopa) de farinha de trigo")
+        mock4.ingredients.append("1/2 colher (chá) de canela em pó")
+        mock4.ingredients.append("1 colher (sopa) de margarina ou manteiga")
+        
+        mock4.description = "Preaqueça o forno a 190° C. Unte levemente as formas para muffins ou use forminhas de papel. Em uma tigela grande misture bem a farinha de trigo peneirada (1 xícara e 1/2), o bicarbonato de sódio, o fermento em pó e o sal. À parte, em outra travessa, misture muito bem as bananas amassadas, o ovo, o açúcar refinado e a manteiga derretida. Depois coloque a mistura de bananas na mistura de farinha delicadamente-só o suficiente para incorporar. Coloque a mistura pronta nas forminhas para muffins com uma colher grande. Misture em uma vasilha o açúcar demerara, a farinha de trigo (2 colheres), a canela em pó e a margarina (ou manteiga), misture bem até a mistura se tornar uma farofa granulada. Espalhe sobre os muffins essa farofa. Leve ao forno preaquecido por 18 a 20 minutos, até o palito de dentes sair limpo."
+        mock4.time = 35
+        mock4.portion = 10
+        
+        let mock5 = Item(name: "Café Gelado")
+        mock5.ingredients.append("1/2 litro de café forte")
+        mock5.ingredients.append("Leite e açucar a gosto")
+    
+        
+        mock5.description = "Prepare um café forte. Deixe esfriar. Coloque numa fôrma de cubinhos de gelo e congele. Depois que o café estiver congelado, retire uns 4 a 5 cubos de gelo e coloque no liquidificador. Acrescente o leite e açúcar a gosto. Bata até que os cubos se desfaçam e a mistura fique cremosa. Despeje em copos altos. Decore a gosto e sirva imediatamente."
+        mock5.time = 15
+        mock5.portion = 2
+        
+        return [mock1,mock2,mock3,mock4,mock5]
     }()
     
-    static var quarto: [Item] = {
-        let mock1 = Item(name: "Panqueca Americana")
-        mock1.description = "Misture em um recipiente: a farinha, o açúcar, o fermento e o sal. Em outro recipiente, misture os ovos, o leite e a manteiga. Acrescente os líquidos aos secos, sem misturar em excesso. O ponto da massa não deve ser muito líquido, deve escorrer lentamente. Aqueça e unte a frigideira com óleo, coloque a massa no centro, cerca de 1/4 xícara por panqueca.Vire a massa para assar do outro lado e está pronto! "
-        let mock2 = Item(name: "Ovos")
-        let mock3 = Item(name: "Crepioca")
-        let mock4 = Item(name: "Torrada")
+    static var almoço: [Item] = {
+        let mock1 = Item(name: "Arroz")
+        mock1.ingredients.append("1 xícara de arroz lavado")
+        mock1.ingredients.append("2 xícaras de água fervente")
+        mock1.ingredients.append("1 dente de alho amassado")
+        mock1.ingredients.append("1/4 de cebola picada")
+        mock1.ingredients.append("azeite o suficiente")
+        mock1.ingredients.append("sal a gosto")
         
-        return [mock1,mock2,mock3,mock4]
+        mock1.description = "Refogue o alho e a cebola no azeite. Coloque o arroz e deixe fritar por cerca de 30 segundos. Adicione a água fervente e o sal. Abaixe o fogo e deixe cozinhar até a água quase secar. Tampe a panela e aguarde cerca de 20 minutos antes de servir. Se desejar fazer mais, é só seguir as proporções, principalmente da água."
+        mock1.time = 20
+        mock1.portion = 3
+        mock1.veg = true
+        
+        let mock2 = Item(name: "Almôndegas")
+        mock2.ingredients.append("500 g de carne moída")
+        mock2.ingredients.append("2 colheres (sopa) de azeite de oliva (30 ml)")
+        mock2.ingredients.append("1 xícara de cebola bem picada (60 g)")
+        mock2.ingredients.append("1 ovo")
+        mock2.ingredients.append("150 g de farinha de rosca")
+        mock2.ingredients.append("sal a gosto")
+        mock2.ingredients.append("pimenta-do-reino a gosto")
+        mock2.ingredients.append("395 g de molho de tomate")
+        
+        mock2.description = "Misture a carne com o ovo, a cebola, o sal, um pouco de azeite de oliva (ou óleo) e a pimenta. Agregue a farinha até dar o ponto de enrolar as almôndegas. Faça pequenas bolinhas. Em uma panela com um pouco de azeite, frite as almôndegas selando-as em fogo alto. Retire as almôndegas e reserve. Em outra panela, esquente o molho de tomate em fogo baixo. Na mesma panela da almôndega, elimine o excesso de azeite e coloque o molho de tomate, colocando as almôndegas para cozinhar por alguns minutos. Em cerca de 15 minutos as almôndegas estarão totalmente cozidas e o prato estará pronto."
+        mock2.time = 60
+        mock2.portion = 4
+        
+        let mock3 = Item(name: "Strogonoff")
+        mock3.ingredients.append("3 peitos de frango cortados em cubos")
+        mock3.ingredients.append("1 dente de alho picado")
+        mock3.ingredients.append("Sal e pimenta a gosto")
+        mock3.ingredients.append("1 cebola picada")
+        mock3.ingredients.append("2 colheres (sopa) de maionese")
+        mock3.ingredients.append("1 colher de manteiga")
+        mock3.ingredients.append("1/2 copo de ketchup")
+        mock3.ingredients.append("1/3 copo de mostarda")
+        mock3.ingredients.append("1 copo de cogumelos")
+        mock3.ingredients.append("1 copo de creme de leite")
+        mock3.ingredients.append("Batata palha a gosto")
+        
+        mock3.description = "Em uma panela, misture o frango, o alho, a maionese, o sal e a pimenta. Em uma frigideira grande, derreta a manteiga e doure a cebola. Junte o frango temperado até que esteja dourado. Adicione os cogumelos, o ketchup e a mostarda. Incorpore o creme de leite e retire do fogo antes de ferver. Sirva com arroz branco e batata palha."
+        mock3.time = 60
+        mock3.portion = 10
+        
+        let mock4 = Item(name: "Panqueca Salgada")
+        mock4.ingredients.append("Massa")
+        mock4.ingredients.append("1 e 1/2 xícara (chá) de farinha de trigo")
+        mock4.ingredients.append("1 xícara (chá) de leite")
+        mock4.ingredients.append("2 ovos")
+        mock4.ingredients.append("4 colheres (sopa) de óleo")
+        mock4.ingredients.append("sal a gosto")
+        mock4.ingredients.append("")
+        mock4.ingredients.append("")
+        mock4.ingredients.append("")
+        mock4.ingredients.append("")
+        mock4.ingredients.append("")
+        mock4.ingredients.append("")
+        
+        mock4.description = ""
+        mock4.time = 40
+        mock4.portion = 10
+        
+        let mock5 = Item(name: "Macarrão com bacon e molho branco")
+        mock5.ingredients.append("1 pacote de macarrão")
+        mock5.ingredients.append("2 copos de leite")
+        mock5.ingredients.append("1 colher de manteiga")
+        mock5.ingredients.append("1/2 kg de bacon frito")
+        mock5.ingredients.append("1 caldo de galinha")
+        mock5.ingredients.append("cebola, cheiro-verde (temperos a gosto)")
+        mock5.ingredients.append("2 colheres de maisena dissolvidas em leite")
+        mock5.ingredients.append("milho e ervilha (opcional)")
+        mock5.ingredients.append("sal a gosto")
+        
+        mock5.description = "Cozinhe o macarrão em água e sal. Escorra, lave em água fria e reserve. Frite o bacon e reserve. Em uma panela junte a manteiga, a cebola picada, o cheiro-verde e os temperos que você desejar e frite. Em seguida acrescente o leite e o caldo de galinha e o sal a gosto. Quando começar a ferver acrescente a maisena dissolvida e deixe engrossar. Junte o bacon, o milho e a ervilha. Misture tudo no macarrão, cubra com bastante queijo e leve ao forno para gratinar."
+        mock5.time = 30
+        mock5.portion = 6
+        
+        return [mock1,mock2,mock3,mock4,mock5]
     }()
     
+    static var Sobremesa: [Item] = {
+        let mock1 = Item(name: "Brigadeirão")
+        mock1.ingredients.append("1 lata de leite condensado")
+        mock1.ingredients.append("1 lata de creme de leite sem soro")
+        mock1.ingredients.append("1 xícara de chocolate em pó")
+        mock1.ingredients.append("1 colher de sopa de manteiga derretida")
+        mock1.ingredients.append("2 ovos")
+        mock1.ingredients.append("1 gema")
+        mock1.ingredients.append("4 colheres de sopa de açúcar")
+        mock1.ingredients.append("Granulado de chocolate para decorar")
+
+        
+        mock1.description = "Bater no liquidificador todos os ingredientes, exceto o granulado de chocolate. Despejar em uma forma com um furo no meio, untada com manteiga. Levar ao forno preaquecido a 180 graus, em banho-maria, durante 1 hora ou até que fique firme. Retirar do forno, deixar esfriar um pouco e levar à geladeira durante 3 horas. Desenformar e decorar com o granulado de chocolate."
+        
+        mock1.time = 4 //horas
+        mock1.portion = 1
+        
+        let mock2 = Item(name: "Copinhos de chocolate recheados")
+        mock2.ingredients.append("Forminhas de muffin")
+        mock2.ingredients.append("450g de chocolate meio amargo derretido")
+        mock2.ingredients.append("200g de creme de amendoim")
+       
+        mock2.description = "Despejar uma porção de chocolate derretido nas forminhas de muffin. Colocar uma colherada de creme de amendoim no centro. Cobrir mais uma porção de chocolate derretido. Levar para a geladeira por 30 minutos. Desenformar e servir."
+        mock2.time = 45
+        mock2.portion = 6
+        
+        let mock3 = Item(name: "Mousse de chocolate vegano")
+        mock3.ingredients.append("1 abacate maduro")
+        mock3.ingredients.append("2 colheres (sopa) de cacau em pó")
+        mock3.ingredients.append("1 pitada de canela em pó")
+        mock3.ingredients.append("4 colheres (sopa) de melado de cana")
+        mock3.ingredients.append("1 colher (chá) de essência de baunilha")
+      
+        mock3.description = "No liquidificador, adicione o abacate, o cacau, a canela, o melado e a essência de baunilha. Bata bem e leve à geladeira por 2 horas."
+        mock3.time = 2 //horas ou 120 min
+        mock3.portion = 3
+        mock3.veg = true
+        
+        let mock4 = Item(name: "Brigadeiro")
+        mock4.ingredients.append("1 caixa de leite condensado")
+        mock4.ingredients.append("1 colher (sopa) de margarina sem sal")
+        mock4.ingredients.append("7 colheres (sopa) de achocolatado ou 4 colheres (sopa) de chocolate em pó")
+        mock4.ingredients.append("chocolate granulado")
+        
+        mock4.description = "Em uma panela funda, acrescente o leite condensado, a margarina e o chocolate em pó. Cozinhe em fogo médio e mexa até que o brigadeiro comece a desgrudar da panela. Deixe esfriar e faça pequenas bolas com a mão passando a massa no chocolate granulado. Quer saber quando o seu brigadeiro chegou no ponto certo? Passe a colher no meio da panela, fazendo um caminho. Se a mistura demorar a voltar para o meio e você conseguir enxergar o fundo da panela, está pronto. Se não, continue mexendo em fogo médio. "
+        mock4.time = 25
+        mock4.portion = 30
+        
+        let mock5 = Item(name: "Mousse de Maracujá")
+        mock5.ingredients.append("2 caixas de gelatina de maracujá")
+        mock5.ingredients.append("2 xícaras de água quente")
+        mock5.ingredients.append("1/2 xícara de suco de maracujá")
+        mock5.ingredients.append("2 xícaras de leite de vaca")
+        mock5.ingredients.append("1 lata de leite condensado")
+        mock5.ingredients.append("1 lata de creme de leite sem soro")
+        
+        mock5.description = "Prepare a gelatina com a água quente. Depois é só bater todos os ingredientes no liquidificador e colocar numa travessa para gelar."
+        mock5.time = 15
+        mock5.portion = 6
+        
+        return [mock1,mock2,mock3,mock4,mock5]
+    }()
     
     
     init(name: String) {
         self.name = name
         self.description = ""
         self.time = 0
+        self.veg = false
+        self.ingredients = []
+        self.portion = 0
+        
+        
     }
     
     

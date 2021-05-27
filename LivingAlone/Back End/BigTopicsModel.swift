@@ -21,10 +21,10 @@ class BigTopicsModel: ObservableObject, Hashable, Identifiable{
         mock1.subCategories = SubCategorie.Alimentação
         
         let mock2 = BigTopicsModel(name: "Limpeza", cor: UIColor.systemBlue)
-        mock2.subCategories = SubCategorie.Alimentação//!!!!!
+        mock2.subCategories = SubCategorie.Limpeza
         
         let mock3 = BigTopicsModel(name: "Organização", cor: UIColor.systemYellow)
-        mock3.subCategories = SubCategorie.Alimentação//!!!!!
+        mock3.subCategories = SubCategorie.Organização
         
         return [mock1,mock2,mock3]
     }()
