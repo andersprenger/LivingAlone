@@ -26,8 +26,8 @@ class Item: ObservableObject, Hashable, Identifiable{
     
     static var cafeDaManha: [Item] = {
         let mock1 = Item(name: "Panqueca Americana")
-        mock1.ingredients[0] = "1 e 1/4 xícara (chá) de farinha de trigo"
-        mock1.ingredients[1] = "1 colher (sopa) de açúcar"
+        mock1.ingredients.append("1 e 1/4 xícara (chá) de farinha de trigo")
+        mock1.ingredients.append("1 colher (sopa) de açúcar")
         mock1.ingredients.append("3 colheres (chá) de fermento em pó")
         mock1.ingredients.append("2 ovos levemente batidos")
         mock1.ingredients.append("1 xícara (chá) de leite")
@@ -254,7 +254,7 @@ class Item: ObservableObject, Hashable, Identifiable{
         
         
     
-            let mock2 = Item(name: "Rotina Limpeza Quarto")
+        let mock2 = Item(name: "Rotina Limpeza Quarto")
            
             mock2.introduction = "Para adquirir uma boa aparência, as janelas e vidros necessitam de uma limpeza regular. O ideal é que a limpeza seja feita mensalmente."
             mock2.description = "Os passos para a limpeza dos vidros são bastante simples. A forma e a ordem em que são feitos é que garante a limpeza eficiente. Veja os três passos que você deve seguir para deixar os vidros limpinhos:"
@@ -263,10 +263,13 @@ class Item: ObservableObject, Hashable, Identifiable{
             mock2.steps.append("Limpe o vidro com uma solução de 5 litros de água para 1 colher de sopa de vinagre ou detergente neutro e 1 colher de sopa de álcool. Passe esta solução com o lado macio da esponja, enxague e seque. Para facilitar essa etapa veja as dicas e truques do tópico abaixo;")
             mock2.steps.append("Aplique o limpa vidros e seque para finalizar.")
         
+        
+        let mock3 = Item(name: "Como lavar Roupa")
     
       
         return [mock1, mock2]
     }()
+   
     
     init(name: String) {
         self.name = name
