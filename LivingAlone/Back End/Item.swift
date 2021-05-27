@@ -18,6 +18,8 @@ class Item: ObservableObject, Hashable, Identifiable{
     @Published var ingredients : [String]
     @Published var portion : Int
     @Published var veg : Bool
+    @Published var introduction : String
+    @Published var steps : [String]
     
     var id: UUID = UUID()
     
@@ -139,20 +141,23 @@ class Item: ObservableObject, Hashable, Identifiable{
         mock3.portion = 10
         
         let mock4 = Item(name: "Panqueca Salgada")
-        mock4.ingredients.append("Massa")
+        mock4.ingredients.append("Massa:")
         mock4.ingredients.append("1 e 1/2 xícara (chá) de farinha de trigo")
         mock4.ingredients.append("1 xícara (chá) de leite")
         mock4.ingredients.append("2 ovos")
         mock4.ingredients.append("4 colheres (sopa) de óleo")
         mock4.ingredients.append("sal a gosto")
-        mock4.ingredients.append("")
-        mock4.ingredients.append("")
-        mock4.ingredients.append("")
-        mock4.ingredients.append("")
-        mock4.ingredients.append("")
-        mock4.ingredients.append("")
+        mock4.ingredients.append("Recheio:")
+        mock4.ingredients.append("300 g de carne moída")
+        mock4.ingredients.append("2 colheres (sopa) de cebola picada ou ralada")
+        mock4.ingredients.append("1/2 tomate cortado em cubos")
+        mock4.ingredients.append("1/2 lata de extrato de tomate")
+        mock4.ingredients.append("1 caixa de creme de leite")
+        mock4.ingredients.append("sal a gosto")
+        mock4.ingredients.append("400 g de muçarela fatiado")
+        mock4.ingredients.append("queijo ralado a gosto")
         
-        mock4.description = ""
+        mock4.description = "Misture a massa até obter uma consistência cremosa. Com um papel-toalha, espalhe óleo por toda a frigideira e despeje uma concha de massa. Faça movimentos circulares para que a massa se espalhe por toda a frigideira. Espere até a massa soltar do fundo e vire a massa para fritar do outro lado. \n \n Recheio \n \n Em uma panela, doure a cebola com o óleo e acrescente a carne. Deixe cozinhar até que saia água da carne, diminua o fogo e tampe. Acrescente o tomate picado e tampe novamente. Deixe cozinhar por mais 3 minutos e misture. Acrescente o extrato de tomate e temperos a gosto. Deixe cozinhar por mais 10 minutos. Quando o molho engrossar, desligue o fogo. Deixe esfriar o molho, acrescente o creme de leite e misture bem. Quando estiver bem homogêneo, leve novamente ao fogo e deixe cozinhar em fogo baixo por mais 5 minutos. \n \n Montagem \n \n Recheie a panqueca com uma fatia de mussarela, uma porção de carne e enrole. Faça esse processo com todas as panquecas. Despeje um pouco de caldo no fundo de um refratário, para untar. Disponha as panquecas já prontas no refratário e despeje sobre elas o restante do molho. Polvilhe queijo ralado sobre as panquecas. Leve ao forno para gratinar, em fogo médio, por 20 minutos ou até que o queijo esteja derretido."
         mock4.time = 40
         mock4.portion = 10
         
@@ -174,7 +179,7 @@ class Item: ObservableObject, Hashable, Identifiable{
         return [mock1,mock2,mock3,mock4,mock5]
     }()
     
-    static var Sobremesa: [Item] = {
+    static var sobremesa: [Item] = {
         let mock1 = Item(name: "Brigadeirão")
         mock1.ingredients.append("1 lata de leite condensado")
         mock1.ingredients.append("1 lata de creme de leite sem soro")
@@ -237,6 +242,31 @@ class Item: ObservableObject, Hashable, Identifiable{
         return [mock1,mock2,mock3,mock4,mock5]
     }()
     
+    static var quarto: [Item] = {
+        let mock1 = Item(name: "Limpeza de Vidros")
+       
+        mock1.introduction = "Para adquirir uma boa aparência, as janelas e vidros necessitam de uma limpeza regular. O ideal é que a limpeza seja feita mensalmente."
+        mock1.description = "Os passos para a limpeza dos vidros são bastante simples. A forma e a ordem em que são feitos é que garante a limpeza eficiente. Veja os três passos que você deve seguir para deixar os vidros limpinhos:"
+        
+        mock1.steps.append("Antes de limpar os vidros é necessário limpar as janelas e aberturas primeiro. Uma sugestão é passar um pincel de cerdas largas entre as frestas da janela para eliminar o pó. Também é possível aspirar as partes de mais difícil acesso, principalmente os cantos;")
+        mock1.steps.append("Limpe o vidro com uma solução de 5 litros de água para 1 colher de sopa de vinagre ou detergente neutro e 1 colher de sopa de álcool. Passe esta solução com o lado macio da esponja, enxague e seque. Para facilitar essa etapa veja as dicas e truques do tópico abaixo;")
+        mock1.steps.append("Aplique o limpa vidros e seque para finalizar.")
+        
+        
+    
+            let mock2 = Item(name: "Rotina Limpeza Quarto")
+           
+            mock2.introduction = "Para adquirir uma boa aparência, as janelas e vidros necessitam de uma limpeza regular. O ideal é que a limpeza seja feita mensalmente."
+            mock2.description = "Os passos para a limpeza dos vidros são bastante simples. A forma e a ordem em que são feitos é que garante a limpeza eficiente. Veja os três passos que você deve seguir para deixar os vidros limpinhos:"
+            
+            mock2.steps.append("Antes de limpar os vidros é necessário limpar as janelas e aberturas primeiro. Uma sugestão é passar um pincel de cerdas largas entre as frestas da janela para eliminar o pó. Também é possível aspirar as partes de mais difícil acesso, principalmente os cantos;")
+            mock2.steps.append("Limpe o vidro com uma solução de 5 litros de água para 1 colher de sopa de vinagre ou detergente neutro e 1 colher de sopa de álcool. Passe esta solução com o lado macio da esponja, enxague e seque. Para facilitar essa etapa veja as dicas e truques do tópico abaixo;")
+            mock2.steps.append("Aplique o limpa vidros e seque para finalizar.")
+        
+    
+      
+        return [mock1, mock2]
+    }()
     
     init(name: String) {
         self.name = name
@@ -245,6 +275,8 @@ class Item: ObservableObject, Hashable, Identifiable{
         self.veg = false
         self.ingredients = []
         self.portion = 0
+        self.steps = []
+        self.introduction = ""
         
         
     }

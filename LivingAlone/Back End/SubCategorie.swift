@@ -18,13 +18,15 @@ class SubCategorie: ObservableObject, Hashable, Identifiable{
         let mock1 = SubCategorie(name: "Café da manhã")
         mock1.items = Item.cafeDaManha
         let mock2 = SubCategorie(name: "Almoço")
+        mock2.items = Item.almoço
         let mock3 = SubCategorie(name: "Sobremesa")
+        mock3.items = Item.sobremesa
         
         return [mock1,mock2,mock3]
     }()
     static var Limpeza : [SubCategorie] = {
         let mock1 = SubCategorie(name: "Quarto")
-        mock1.items = Item.cafeDaManha
+        mock1.items = Item.quarto
         let mock2 = SubCategorie(name: "Cozinha")
         let mock3 = SubCategorie(name: "Banheiro")
         
