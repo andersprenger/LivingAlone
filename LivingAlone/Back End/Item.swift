@@ -276,7 +276,7 @@ class Item: ObservableObject, Hashable, Identifiable{
         let mock4 = Item(name: "Dicas para Lavar roupas")
         let mock5 = Item(name: "Como lavar Roupa")
       
-        return [mock1, mock2]
+        return [mock1,mock2,mock3,mock4,mock5]
     }()
     
     static var casa: [Item] = {
@@ -304,69 +304,51 @@ class Item: ObservableObject, Hashable, Identifiable{
         let mock4 = Item(name: "Limpeza na cozinha")
         let mock5 = Item(name: "")
       
-        return [mock1, mock2]
+        return [mock1,mock2,mock3,mock4,mock5]
     }()
     
    
     
     // Organização
     
-    static var quartoOrganização: [Item] = {
-        let mock1 = Item(name: "Limpeza de Vidros")
+    static var organização: [Item] = {
+        let mock1 = Item(name: "")
        
-        mock1.introduction = "Para adquirir uma boa aparência, as janelas e vidros necessitam de uma limpeza regular. O ideal é que a limpeza seja feita mensalmente."
-        mock1.description = "Os passos para a limpeza dos vidros são bastante simples. A forma e a ordem em que são feitos é que garante a limpeza eficiente. Veja os três passos que você deve seguir para deixar os vidros limpinhos:"
+        mock1.introduction = ""
+        mock1.description = ""
         
-        mock1.steps.append("Antes de limpar os vidros é necessário limpar as janelas e aberturas primeiro. Uma sugestão é passar um pincel de cerdas largas entre as frestas da janela para eliminar o pó. Também é possível aspirar as partes de mais difícil acesso, principalmente os cantos;")
-        mock1.steps.append("Limpe o vidro com uma solução de 5 litros de água para 1 colher de sopa de vinagre ou detergente neutro e 1 colher de sopa de álcool. Passe esta solução com o lado macio da esponja, enxague e seque. Para facilitar essa etapa veja as dicas e truques do tópico abaixo;")
-        mock1.steps.append("Aplique o limpa vidros e seque para finalizar.")
+        mock1.steps.append("")
+        mock1.steps.append("")
+        mock1.steps.append("")
         
         
     
-        let mock2 = Item(name: "Rotina Limpeza Quarto")
-           
-            mock2.introduction = "Para adquirir uma boa aparência, as janelas e vidros necessitam de uma limpeza regular. O ideal é que a limpeza seja feita mensalmente."
-            mock2.description = "Os passos para a limpeza dos vidros são bastante simples. A forma e a ordem em que são feitos é que garante a limpeza eficiente. Veja os três passos que você deve seguir para deixar os vidros limpinhos:"
-            
-            mock2.steps.append("Antes de limpar os vidros é necessário limpar as janelas e aberturas primeiro. Uma sugestão é passar um pincel de cerdas largas entre as frestas da janela para eliminar o pó. Também é possível aspirar as partes de mais difícil acesso, principalmente os cantos;")
-            mock2.steps.append("Limpe o vidro com uma solução de 5 litros de água para 1 colher de sopa de vinagre ou detergente neutro e 1 colher de sopa de álcool. Passe esta solução com o lado macio da esponja, enxague e seque. Para facilitar essa etapa veja as dicas e truques do tópico abaixo;")
-            mock2.steps.append("Aplique o limpa vidros e seque para finalizar.")
-        
-        
-        let mock3 = Item(name: "Como lavar Roupa")
-        let mock4 = Item(name: "Dicas para Lavar roupas")
-        let mock5 = Item(name: "Como lavar Roupa")
+        let mock2 = Item(name: "")
+        let mock3 = Item(name: "")
+        let mock4 = Item(name: "")
+        let mock5 = Item(name: "")
       
         return [mock1,mock2,mock3,mock4,mock5]
     }()
     
-    static var guardaRoupa: [Item] = {
-        let mock1 = Item(name: "Limpeza de Vidros")
+    static var outros: [Item] = {
+        let mock1 = Item(name: "")
        
-        mock1.introduction = "Para adquirir uma boa aparência, as janelas e vidros necessitam de uma limpeza regular. O ideal é que a limpeza seja feita mensalmente."
-        mock1.description = "Os passos para a limpeza dos vidros são bastante simples. A forma e a ordem em que são feitos é que garante a limpeza eficiente. Veja os três passos que você deve seguir para deixar os vidros limpinhos:"
+        mock1.introduction = ""
+        mock1.description = ""
         
-        mock1.steps.append("Antes de limpar os vidros é necessário limpar as janelas e aberturas primeiro. Uma sugestão é passar um pincel de cerdas largas entre as frestas da janela para eliminar o pó. Também é possível aspirar as partes de mais difícil acesso, principalmente os cantos;")
-        mock1.steps.append("Limpe o vidro com uma solução de 5 litros de água para 1 colher de sopa de vinagre ou detergente neutro e 1 colher de sopa de álcool. Passe esta solução com o lado macio da esponja, enxague e seque. Para facilitar essa etapa veja as dicas e truques do tópico abaixo;")
-        mock1.steps.append("Aplique o limpa vidros e seque para finalizar.")
+        mock1.steps.append("")
+        mock1.steps.append("")
+        mock1.steps.append("")
         
         
     
-        let mock2 = Item(name: "Rotina Limpeza Quarto")
-           
-            mock2.introduction = "Para adquirir uma boa aparência, as janelas e vidros necessitam de uma limpeza regular. O ideal é que a limpeza seja feita mensalmente."
-            mock2.description = "Os passos para a limpeza dos vidros são bastante simples. A forma e a ordem em que são feitos é que garante a limpeza eficiente. Veja os três passos que você deve seguir para deixar os vidros limpinhos:"
-            
-            mock2.steps.append("Antes de limpar os vidros é necessário limpar as janelas e aberturas primeiro. Uma sugestão é passar um pincel de cerdas largas entre as frestas da janela para eliminar o pó. Também é possível aspirar as partes de mais difícil acesso, principalmente os cantos;")
-            mock2.steps.append("Limpe o vidro com uma solução de 5 litros de água para 1 colher de sopa de vinagre ou detergente neutro e 1 colher de sopa de álcool. Passe esta solução com o lado macio da esponja, enxague e seque. Para facilitar essa etapa veja as dicas e truques do tópico abaixo;")
-            mock2.steps.append("Aplique o limpa vidros e seque para finalizar.")
-        
-        
-        let mock3 = Item(name: "Como lavar Roupa")
-        let mock4 = Item(name: "Dicas para Lavar roupas")
-        let mock5 = Item(name: "Como lavar Roupa")
+        let mock2 = Item(name: "")
+        let mock3 = Item(name: "")
+        let mock4 = Item(name: "")
+        let mock5 = Item(name: "")
       
-        return [mock1, mock2]
+        return [mock1,mock2,mock3,mock4,mock5]
     }()
     
     
