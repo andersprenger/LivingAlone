@@ -24,6 +24,11 @@
 		71F600C326608D7300109994 /* HomeOrganizationCard1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600C226608D7300109994 /* HomeOrganizationCard1.swift */; };
 		71F600C526608D7D00109994 /* HomeOrganizationCard2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600C426608D7D00109994 /* HomeOrganizationCard2.swift */; };
 		71F600C726608D8B00109994 /* HomeOrganizationCard3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600C626608D8B00109994 /* HomeOrganizationCard3.swift */; };
+		71F600C92660940000109994 /* HomeCookingCard1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600C82660940000109994 /* HomeCookingCard1.swift */; };
+		71F600CB2660942500109994 /* HomeCookingCard2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600CA2660942500109994 /* HomeCookingCard2.swift */; };
+		71F600CD2660942E00109994 /* HomeCookingCard3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600CC2660942E00109994 /* HomeCookingCard3.swift */; };
+		71F600CF2660943800109994 /* HomeCookingCard4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600CE2660943800109994 /* HomeCookingCard4.swift */; };
+		71F600D12660944100109994 /* HomeCookingCard5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600D02660944100109994 /* HomeCookingCard5.swift */; };
 		D0E23C2DACCBA1D1F798CCB3 /* Pods_Living_Alone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F635CE9903D11EAD7E66EE1 /* Pods_Living_Alone.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +53,11 @@
 		71F600C226608D7300109994 /* HomeOrganizationCard1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOrganizationCard1.swift; sourceTree = "<group>"; };
 		71F600C426608D7D00109994 /* HomeOrganizationCard2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOrganizationCard2.swift; sourceTree = "<group>"; };
 		71F600C626608D8B00109994 /* HomeOrganizationCard3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOrganizationCard3.swift; sourceTree = "<group>"; };
+		71F600C82660940000109994 /* HomeCookingCard1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCookingCard1.swift; sourceTree = "<group>"; };
+		71F600CA2660942500109994 /* HomeCookingCard2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCookingCard2.swift; sourceTree = "<group>"; };
+		71F600CC2660942E00109994 /* HomeCookingCard3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCookingCard3.swift; sourceTree = "<group>"; };
+		71F600CE2660943800109994 /* HomeCookingCard4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCookingCard4.swift; sourceTree = "<group>"; };
+		71F600D02660944100109994 /* HomeCookingCard5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCookingCard5.swift; sourceTree = "<group>"; };
 		7F635CE9903D11EAD7E66EE1 /* Pods_Living_Alone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Living_Alone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EE72BF135E9FA7C95E4FFA /* Pods-Living Alone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Living Alone.release.xcconfig"; path = "Target Support Files/Pods-Living Alone/Pods-Living Alone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +232,11 @@
 		71F600C026608CFF00109994 /* Cooking */ = {
 			isa = PBXGroup;
 			children = (
+				71F600C82660940000109994 /* HomeCookingCard1.swift */,
+				71F600CA2660942500109994 /* HomeCookingCard2.swift */,
+				71F600CC2660942E00109994 /* HomeCookingCard3.swift */,
+				71F600CE2660943800109994 /* HomeCookingCard4.swift */,
+				71F600D02660944100109994 /* HomeCookingCard5.swift */,
 			);
 			name = Cooking;
 			sourceTree = "<group>";
@@ -350,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71F600C726608D8B00109994 /* HomeOrganizationCard3.swift in Sources */,
+				71F600CB2660942500109994 /* HomeCookingCard2.swift in Sources */,
 				71F600B726607DC300109994 /* HomeView.swift in Sources */,
 				71F600BC2660878B00109994 /* HomeCleaningCard2.swift in Sources */,
 				71F600AE2660725D00109994 /* Extensions.swift in Sources */,
@@ -361,9 +377,13 @@
 				71F600BA266081B100109994 /* HomeCleaningCard1.swift in Sources */,
 				71F600B02660738900109994 /* HomeCleaningButton.swift in Sources */,
 				71F600A626606F4600109994 /* YouTubePlayer.swift in Sources */,
+				71F600CF2660943800109994 /* HomeCookingCard4.swift in Sources */,
 				71F600A82660711000109994 /* SearchBar.swift in Sources */,
+				71F600D12660944100109994 /* HomeCookingCard5.swift in Sources */,
 				71F6009526606C5600109994 /* ContentView.swift in Sources */,
+				71F600CD2660942E00109994 /* HomeCookingCard3.swift in Sources */,
 				71F6009326606C5600109994 /* LivingAloneApp.swift in Sources */,
+				71F600C92660940000109994 /* HomeCookingCard1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
