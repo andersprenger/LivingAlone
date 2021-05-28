@@ -29,6 +29,12 @@
 		71F600CD2660942E00109994 /* HomeCookingCard3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600CC2660942E00109994 /* HomeCookingCard3.swift */; };
 		71F600CF2660943800109994 /* HomeCookingCard4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600CE2660943800109994 /* HomeCookingCard4.swift */; };
 		71F600D12660944100109994 /* HomeCookingCard5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600D02660944100109994 /* HomeCookingCard5.swift */; };
+		71F600D32660A1B800109994 /* CookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600D22660A1B800109994 /* CookingView.swift */; };
+		71F600D52660A1C600109994 /* CleaningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600D42660A1C600109994 /* CleaningView.swift */; };
+		71F600D92660A20700109994 /* OrganizingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600D82660A20700109994 /* OrganizingView.swift */; };
+		71F600DB2660A2C100109994 /* CookingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600DA2660A2C100109994 /* CookingCard.swift */; };
+		71F600DD2660A2CE00109994 /* CleaningCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600DC2660A2CE00109994 /* CleaningCard.swift */; };
+		71F600DF2660A2DC00109994 /* OrganizingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600DE2660A2DC00109994 /* OrganizingCard.swift */; };
 		D0E23C2DACCBA1D1F798CCB3 /* Pods_Living_Alone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F635CE9903D11EAD7E66EE1 /* Pods_Living_Alone.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +64,12 @@
 		71F600CC2660942E00109994 /* HomeCookingCard3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCookingCard3.swift; sourceTree = "<group>"; };
 		71F600CE2660943800109994 /* HomeCookingCard4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCookingCard4.swift; sourceTree = "<group>"; };
 		71F600D02660944100109994 /* HomeCookingCard5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCookingCard5.swift; sourceTree = "<group>"; };
+		71F600D22660A1B800109994 /* CookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingView.swift; sourceTree = "<group>"; };
+		71F600D42660A1C600109994 /* CleaningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningView.swift; sourceTree = "<group>"; };
+		71F600D82660A20700109994 /* OrganizingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizingView.swift; sourceTree = "<group>"; };
+		71F600DA2660A2C100109994 /* CookingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingCard.swift; sourceTree = "<group>"; };
+		71F600DC2660A2CE00109994 /* CleaningCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningCard.swift; sourceTree = "<group>"; };
+		71F600DE2660A2DC00109994 /* OrganizingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizingCard.swift; sourceTree = "<group>"; };
 		7F635CE9903D11EAD7E66EE1 /* Pods_Living_Alone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Living_Alone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EE72BF135E9FA7C95E4FFA /* Pods-Living Alone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Living Alone.release.xcconfig"; path = "Target Support Files/Pods-Living Alone/Pods-Living Alone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +193,8 @@
 		71F600AA2660713400109994 /* Cooking */ = {
 			isa = PBXGroup;
 			children = (
+				71F600D22660A1B800109994 /* CookingView.swift */,
+				71F600DA2660A2C100109994 /* CookingCard.swift */,
 			);
 			path = Cooking;
 			sourceTree = "<group>";
@@ -188,6 +202,8 @@
 		71F600AB2660713E00109994 /* Cleaning */ = {
 			isa = PBXGroup;
 			children = (
+				71F600D42660A1C600109994 /* CleaningView.swift */,
+				71F600DC2660A2CE00109994 /* CleaningCard.swift */,
 			);
 			path = Cleaning;
 			sourceTree = "<group>";
@@ -195,6 +211,8 @@
 		71F600AC2660714700109994 /* Organizing */ = {
 			isa = PBXGroup;
 			children = (
+				71F600D82660A20700109994 /* OrganizingView.swift */,
+				71F600DE2660A2DC00109994 /* OrganizingCard.swift */,
 			);
 			path = Organizing;
 			sourceTree = "<group>";
@@ -365,19 +383,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				71F600C726608D8B00109994 /* HomeOrganizationCard3.swift in Sources */,
+				71F600D32660A1B800109994 /* CookingView.swift in Sources */,
 				71F600CB2660942500109994 /* HomeCookingCard2.swift in Sources */,
 				71F600B726607DC300109994 /* HomeView.swift in Sources */,
 				71F600BC2660878B00109994 /* HomeCleaningCard2.swift in Sources */,
 				71F600AE2660725D00109994 /* Extensions.swift in Sources */,
 				71F600B42660781F00109994 /* HomeOrganizationButton.swift in Sources */,
+				71F600DD2660A2CE00109994 /* CleaningCard.swift in Sources */,
 				71F600C526608D7D00109994 /* HomeOrganizationCard2.swift in Sources */,
+				71F600DB2660A2C100109994 /* CookingCard.swift in Sources */,
 				71F600C326608D7300109994 /* HomeOrganizationCard1.swift in Sources */,
 				71F600B22660781000109994 /* HomeCookingButton.swift in Sources */,
+				71F600D92660A20700109994 /* OrganizingView.swift in Sources */,
 				71F600BE266087AB00109994 /* HomeCleaningCard3.swift in Sources */,
 				71F600BA266081B100109994 /* HomeCleaningCard1.swift in Sources */,
+				71F600DF2660A2DC00109994 /* OrganizingCard.swift in Sources */,
 				71F600B02660738900109994 /* HomeCleaningButton.swift in Sources */,
 				71F600A626606F4600109994 /* YouTubePlayer.swift in Sources */,
 				71F600CF2660943800109994 /* HomeCookingCard4.swift in Sources */,
+				71F600D52660A1C600109994 /* CleaningView.swift in Sources */,
 				71F600A82660711000109994 /* SearchBar.swift in Sources */,
 				71F600D12660944100109994 /* HomeCookingCard5.swift in Sources */,
 				71F6009526606C5600109994 /* ContentView.swift in Sources */,

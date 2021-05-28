@@ -44,7 +44,7 @@ struct HomeCleaningCard1: View {
     }
 }
 
-struct CleaningCard_Previews: PreviewProvider {
+struct HomeCleaningCard_Previews: PreviewProvider {
     static var previews: some View {
         HomeCleaningCard1()
             .previewLayout(.fixed(width: 210, height: 140))
