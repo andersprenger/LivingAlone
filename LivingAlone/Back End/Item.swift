@@ -23,7 +23,6 @@ class Item: ObservableObject, Hashable, Identifiable{
     
     var id: UUID = UUID()
     
-    
     //Receitas
     
     static var cafeDaManha: [Item] = {
@@ -312,7 +311,7 @@ class Item: ObservableObject, Hashable, Identifiable{
     // Organização
     
     static var organização: [Item] = {
-        let mock1 = Item(name: "")
+        let mock1 = Item(name: "Dicas de Organização")
        
         mock1.introduction = ""
         mock1.description = ""
@@ -320,35 +319,37 @@ class Item: ObservableObject, Hashable, Identifiable{
         mock1.steps.append("")
         mock1.steps.append("")
         mock1.steps.append("")
-        
-        
+        let mock2 = Item(name: "Ganchos e plateleiras")
+        mock2.description = "Ganhos e prateleiras são uma ótima pedida para sua casa. Você pode botá-los por todas as partes da casa e aproveitar muito espaço por isso.\nLocais interessantes para se por são em cima das portas( prateleiras em cima de portas ganham muito espaço e dão um design difetente para a casa), do lado de móveis e em paredes livres. Além dessas opções, um conjunto de ganchos e prateleiras na entrada de sua casa pode criar um visual diferenciado para sua casa, além de ser muito cômodo para estar sempre pronto para entrar e sair."
+        let mock3 = Item(name: "Argolas de chuveiro para organização")
+        mock3.description = "Ao invés de jogar o cinto, a gravata ou qualquer roupa pequena nos cantos, você pode usar argolas das cortinas do chuveiro e juntá-las com um cabide para fazer um porta coisas. "
+        let mock4 = Item(name: "Mesa de tênis embaixo da cama")
+        mock4.description = "Bote os tênis embaixo da cama e faça uma mesa ou caixa deslizante para melhor organizá-los"
+
     
-        let mock2 = Item(name: "")
-        let mock3 = Item(name: "")
-        let mock4 = Item(name: "")
-        let mock5 = Item(name: "")
+       
       
-        return [mock1,mock2,mock3,mock4,mock5]
+        return [mock1,mock2,mock3,mock4]
     }()
     
     static var outros: [Item] = {
-        let mock1 = Item(name: "")
+        let mock1 = Item(name: "Dicas Gerais")
        
-        mock1.introduction = ""
-        mock1.description = ""
+        mock1.steps.append("A melhor maneira de guardar bolsas é uma dentro da outra.")
+        mock1.steps.append("Não compre produtos especiais para organização. A ideia é diminuir a quantidade de itens que possui, e não comprar mais.")
+        mock1.steps.append("O objetivo de um presente se cumpre na hora em que o recebemos. Por isso, não tenha medo de se desfazer de lembranças que recebeu e nunca usou.")
+        mock1.steps.append("Você guarda um monte de fios e cabos que não sabe de onde são? Jogue-os no lixo. Só mantenha aqueles cuja função você possa identificar.")
+        mock1.steps.append("Qual foi a última vez que você abriu um manual de instruções? Eles não servem para nada.")
+        mock1.steps.append("Esvazie o conteúdo daquelas caixas onde guarda objetos aleatórios, como botões soltos, prendedores de cabelo, moedas, canetas e bloquinhos promocionais.")
+        mock1.steps.append("Organize as roupas na vertical. O resultado final é algo como uma biblioteca de roupas.")
         
-        mock1.steps.append("")
-        mock1.steps.append("")
-        mock1.steps.append("")
-        
-        
-    
-        let mock2 = Item(name: "")
-        let mock3 = Item(name: "")
-        let mock4 = Item(name: "")
-        let mock5 = Item(name: "")
+//        let mock2 = Item(name: "")
+//        let mock3 = Item(name: "")
+//        let mock4 = Item(name: "")
+//        let mock5 = Item(name: "")
+//
       
-        return [mock1,mock2,mock3,mock4,mock5]
+        return [mock1]
     }()
     
     
@@ -376,4 +377,5 @@ class Item: ObservableObject, Hashable, Identifiable{
     }
     
 }
+
 

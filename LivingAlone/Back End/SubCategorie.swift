@@ -40,6 +40,7 @@ class SubCategorie: ObservableObject, Hashable, Identifiable{
         mock2.items = Item.outros
         
         
+        
         return [mock1,mock2]
     }()
     
