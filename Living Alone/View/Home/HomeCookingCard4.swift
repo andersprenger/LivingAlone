@@ -18,9 +18,9 @@ struct HomeCookingCard4: View {
                 HStack {
                     Spacer()
                     
-                    Image("Arroz")
+                    Image("Omelete")
                         .resizable()
-                        .frame(width: 102, height: 123)
+                        .frame(width: 125, height: 133)
                 }
             }
             

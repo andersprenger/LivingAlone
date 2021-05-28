@@ -27,9 +27,12 @@ struct HomeView: View {
                 VStack (alignment: .leading) {
                     Text("Cleaning")
                         .font(.system(size: 18, weight: .bold))
+                        .padding(.leading)
                     
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack {
+                            Spacer()
+                            
                             HomeCookingCard1()
                             
                             HomeCookingCard2()
@@ -42,14 +45,17 @@ struct HomeView: View {
                         }
                     }
                 }
-                .padding()
+                .padding(.vertical)
                 
                 VStack (alignment: .leading) {
                     Text("Cleaning")
                         .font(.system(size: 18, weight: .bold))
+                        .padding(.leading)
                     
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack {
+                            Spacer()
+                            
                             HomeCleaningCard1()
                             
                             HomeCleaningCard2()
@@ -58,14 +64,17 @@ struct HomeView: View {
                         }
                     }
                 }
-                .padding()
+                .padding(.vertical)
                 
                 VStack (alignment: .leading) {
                     Text("Organization")
                         .font(.system(size: 18, weight: .bold))
+                        .padding(.leading)
                     
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack {
+                            Spacer()
+                            
                             HomeOrganizationCard1()
                             
                             HomeOrganizationCard2()
@@ -74,7 +83,7 @@ struct HomeView: View {
                         }
                     }
                 }
-                .padding()
+                .padding(.vertical)
                 
                 Spacer()
             }

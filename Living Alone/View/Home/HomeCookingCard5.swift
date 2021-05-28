@@ -18,9 +18,9 @@ struct HomeCookingCard5: View {
                 HStack {
                     Spacer()
                     
-                    Image("Arroz")
+                    Image("Mousse")
                         .resizable()
-                        .frame(width: 102, height: 123)
+                        .frame(width: 109, height: 123)
                 }
             }
             
@@ -28,19 +28,18 @@ struct HomeCookingCard5: View {
                 HStack (alignment: .top) {
                     
                     VStack {
-                        Text("Arroz")
+                        Text("Mousse")
                             .font(.system(size: 17, weight: .bold))
                             .foregroundColor(.white)
                             .multilineTextAlignment(.leading)
-                            .frame(width: 50, height: 41, alignment: .center)
+                            .frame(width: 80, height: 41, alignment: .center)
                             .padding(.leading, 5)
                         
-                        Text("\(20) min")
+                        Text("\(120) min")
                             .font(.system(size: 16, weight: .regular))
                             .foregroundColor(.white)
                             .multilineTextAlignment(.leading)
                             .frame(width: 58, height: 17, alignment: .center)
-                            .padding(.leading, 10)
                             .padding(.top, -15)
                     }
                     
