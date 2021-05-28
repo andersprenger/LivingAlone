@@ -11,85 +11,93 @@ struct HomeView: View {
     @State private var isSearching = false
     
     var body: some View {
-        ScrollView {
-            VStack {
-                SearchBar(text: .constant(""), isEditing: $isSearching)
-                    .padding()
-                
-                HStack (alignment: .center) {
-                    HomeCookingButton()
+        NavigationView {
+            ScrollView {
+                VStack {
+                    SearchBar(text: .constant(""), isEditing: $isSearching)
+                        .padding()
                     
-                    HomeCleaningButton()
-                    
-                    HomeOrganizationButton()
-                }
-
-                VStack (alignment: .leading) {
-                    Text("Cleaning")
-                        .font(.system(size: 18, weight: .bold))
-                        .padding(.leading)
-                    
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack {
-                            Spacer()
-                            
-                            HomeCookingCard1()
-                            
-                            HomeCookingCard2()
-                            
-                            HomeCookingCard3()
-                            
-                            HomeCookingCard4()
-                            
-                            HomeCookingCard5()
+                    HStack (alignment: .center) {
+                        NavigationLink (destination: CookingView()){
+                            HomeCookingButton()
+                        }
+                        
+                        NavigationLink (destination: CleaningView()){
+                            HomeCleaningButton()
+                        }
+                        
+                        
+                        NavigationLink (destination: OrganizingView()){
+                            HomeOrganizationButton()
                         }
                     }
-                }
-                .padding(.vertical)
-                
-                VStack (alignment: .leading) {
-                    Text("Cleaning")
-                        .font(.system(size: 18, weight: .bold))
-                        .padding(.leading)
                     
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack {
-                            Spacer()
-                            
-                            HomeCleaningCard1()
-                            
-                            HomeCleaningCard2()
-                            
-                            HomeCleaningCard3()
+                    VStack (alignment: .leading) {
+                        Text("Cleaning")
+                            .font(.system(size: 18, weight: .bold))
+                            .padding(.leading)
+                        
+                        ScrollView (.horizontal, showsIndicators: false) {
+                            HStack {
+                                Spacer()
+                                
+                                HomeCookingCard1()
+                                
+                                HomeCookingCard2()
+                                
+                                HomeCookingCard3()
+                                
+                                HomeCookingCard4()
+                                
+                                HomeCookingCard5()
+                            }
                         }
                     }
-                }
-                .padding(.vertical)
-                
-                VStack (alignment: .leading) {
-                    Text("Organization")
-                        .font(.system(size: 18, weight: .bold))
-                        .padding(.leading)
+                    .padding(.vertical)
                     
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack {
-                            Spacer()
-                            
-                            HomeOrganizationCard1()
-                            
-                            HomeOrganizationCard2()
-
-                            HomeOrganizationCard3()
+                    VStack (alignment: .leading) {
+                        Text("Cleaning")
+                            .font(.system(size: 18, weight: .bold))
+                            .padding(.leading)
+                        
+                        ScrollView (.horizontal, showsIndicators: false) {
+                            HStack {
+                                Spacer()
+                                
+                                HomeCleaningCard1()
+                                
+                                HomeCleaningCard2()
+                                
+                                HomeCleaningCard3()
+                            }
                         }
                     }
+                    .padding(.vertical)
+                    
+                    VStack (alignment: .leading) {
+                        Text("Organization")
+                            .font(.system(size: 18, weight: .bold))
+                            .padding(.leading)
+                        
+                        ScrollView (.horizontal, showsIndicators: false) {
+                            HStack {
+                                Spacer()
+                                
+                                HomeOrganizationCard1()
+                                
+                                HomeOrganizationCard2()
+                                
+                                HomeOrganizationCard3()
+                            }
+                        }
+                    }
+                    .padding(.vertical)
+                    
+                    Spacer()
                 }
-                .padding(.vertical)
-                
-                Spacer()
             }
+            .navigationBarHidden(true)
         }
-        
-        
     }
 }
 

@@ -9,27 +9,25 @@ import SwiftUI
 
 struct HomeCookingButton: View {
     var body: some View {
-        Button(action: {}) {
-            VStack {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 16)
-                        .frame(width: 100, height: 55)
-                        .foregroundColor(Color("CookingColor"))
-                    
-                    Image("HomeButtonCooking")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 95, height: 95)
-                        .offset(CGSize(width: 0, height: -6))
-                }
-                .frame(width: 100, height: 100)
+        VStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 16)
+                    .frame(width: 100, height: 55)
+                    .foregroundColor(Color("CookingColor"))
                 
-                
-                Text("Cooking")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(Color("DynamicColor"))
-                    .padding(.top, -14)
+                Image("HomeButtonCooking")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 95, height: 95)
+                    .offset(CGSize(width: 0, height: -6))
             }
+            .frame(width: 100, height: 100)
+            
+            
+            Text("Cooking")
+                .font(.system(size: 16, weight: .semibold))
+                .foregroundColor(Color("DynamicColor"))
+                .padding(.top, -14)
         }
     }
 }
