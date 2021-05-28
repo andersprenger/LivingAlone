@@ -263,20 +263,27 @@ class Item: ObservableObject, Hashable, Identifiable{
         
         
     
-        let mock2 = Item(name: "Como tirar manchas da roupa")
+        let mock2 = Item(name: "Como lavar roupa")
            
-            mock2.introduction = "Antes de iniciar o processo de lavagem, seja à mão ou na máquina de lavar, é necessário assegurar a remoção das manchas."
+            mock2.introduction = "Esses são os passos básicos para lavar sua roupa na máquina. É claro que alguns equipamentos podem ter passos extras, mas esses são os comuns para qualquer modelo. Antes de iniciar o processo de lavagem, seja à mão ou na máquina de lavar, é necessário assegurar a remoção das manchas."
             
-            mock2.steps.append("Umedeça a peça manchada.")
-            mock2.steps.append("Limpe o vidro com uma solução de 5 litros de água para 1 colher de sopa de vinagre ou detergente neutro e 1 colher de sopa de álcool. Passe esta solução com o lado macio da esponja, enxague e seque. Para facilitar essa etapa veja as dicas e truques do tópico abaixo;")
-            mock2.steps.append("Aplique o limpa vidros e seque para finalizar.")
+            mock2.steps.append("Antes de começar, separe as roupas brancas e mais claras das roupas coloridas e das roupas pretas. Faça também a separação por tipo de roupa e por nível de sujeira;")
+            mock2.steps.append("Após separar as roupas, opte pelo ciclo de lavagem, de acordo com o tipo e sujeira da roupa;")
+            mock2.steps.append("Dilua o sabão em pó e o amaciante antes de colocá-los nos respectivos reservatórios;")
+            mock2.steps.append("E, por fim, selecione o nível de água de acordo com a quantidade de roupa.")
+            mock2.steps.append("Depois que a máquina já tiver feito toda a lavagem, tire as roupas e coloque-as no varal.")
         
         
-        let mock3 = Item(name: "Como lavar Roupa")
-        let mock4 = Item(name: "Dicas para Lavar roupas")
-        let mock5 = Item(name: "Como lavar Roupa")
+        let mock3 = Item(name: "Como tirar manchas de roupas")
+        mock2.introduction = "Manchar as roupas causa uma das piores sensações do mundo. Ter que se desfazer de uma peça querida por conta de um descuido é muito frustrante. Mas, calma! Com nosso guia completo de como tirar manchas, você não vai se desesperar toda vez que aquele molho de tomate aterrissar na sua camisa branquinha. Descubra como tirar essa e outras manchas agora!"
+        
+        mock2.steps.append("Mancha de maquiagem(produtos em pó): Retire o excesso com uma escova macia e aplique um pouco de detergente. Esfregue com a escova e depois faça a lavagem normalmente, na máquina ou à mão.")
+        mock2.steps.append("Mancha de caneta esferográfica: Utilize um algodão embebido em álcool. Esfregue-o sobre a mancha até ela sair. Siga com a lavagem normal.")
+        mock2.steps.append("Mancha de gordura: coloque talco ou amido de milho sobre a mancha. Eles vão absorver a gordura. Deixe de um dia para o outro e, no dia seguinte, caso a mancha não tenha saído completamente, utilize detergente para louça incolor. Esfregue com cuidado, enxágue com vinagre branco, retire o excesso com água e siga com a lavagem normal.")
+        
       
-        return [mock1,mock2,mock3,mock4,mock5]
+      
+        return [mock1,mock2,mock3]
     }()
     
     static var casa: [Item] = {
@@ -295,21 +302,29 @@ class Item: ObservableObject, Hashable, Identifiable{
            
             mock2.introduction = "O quarto é um cômodo da casa que precisa de atenção quando o assunto é limpeza. Isso porque o local também acumula sujeiras e ácaros, que afetam o bem-estar e a saúde respiratória de quem dorme no ambiente. E para evitar que isso aconteça, é necessário definir uma rotina de limpeza."
             
-            mock2.steps.append("Antes de limpar os vidros é necessário limpar as janelas e aberturas primeiro. Uma sugestão é passar um pincel de cerdas largas entre as frestas da janela para eliminar o pó. Também é possível aspirar as partes de mais difícil acesso, principalmente os cantos;")
-            mock2.steps.append("Limpe o vidro com uma solução de 5 litros de água para 1 colher de sopa de vinagre ou detergente neutro e 1 colher de sopa de álcool. Passe esta solução com o lado macio da esponja, enxague e seque. Para facilitar essa etapa veja as dicas e truques do tópico abaixo;")
-            mock2.steps.append("Aplique o limpa vidros e seque para finalizar.")
+            mock2.steps.append("Organize as roupas: Encontrar roupas espalhadas pelo quarto ou em cima da cama não é algo raro. Isso porque as pessoas têm rotinas agitadas e vivem com pressa e, por isso, acabam não tendo tempo para dobrar a peça e guardar de volta no guarda-roupa. Por isso, o ideal é dar o destino certo para as roupas que estão largadas todos os dias: cesto de roupa suja ou armário.")
+            mock2.steps.append("Mantenha o ambiente arejado: Antes de qualquer limpeza, a mudança de hábitos também colabora com a higienização do local. Atitudes simples como deixar as janelas e portas do cômodo abertas alguns minutos ao dia, por exemplo, facilitam a entrada de ar puro no cômodo, eliminando o cheiro de mofo e umidade das paredes.")
+            mock2.steps.append("Recolha os objetos espalhados: Durante a semana, é comum que objetos fiquem espalhados pelo quarto. Copos, potes e embalagens de comida, por exemplo, são coisas que não deveriam estar neste ambiente, mas às vezes acabam deixados lá. Até mesmo outros objetos, como perfumes, acessórios e roupas, podem ficar fora do lugar durante o dia a dia. Mas a recomendação é que se recolha as coisas espalhadas todos os dias, mantendo o ambiente organizado e mais limpo até o dia da faxina pesada.")
         
         
         let mock3 = Item(name: "5 truques para a cozinha")
-        let mock4 = Item(name: "Limpeza na cozinha")
-        let mock5 = Item(name: "")
+        
+        mock3.introduction = "Confira 5 dicas de limpeza de cozinha para quem não tem tempo a perder no dia a dia!"
+        
+        mock3.steps.append("Liquidificador: coloque agua quente no liquidificador, acrescente detergente tampe o liquidificador e o ligue. Depois é só enxaguar o liquido dentro e está limpo!")
+        mock3.steps.append("Tábuas de madeira: corte um limão em duas fatias e afunde em uma tigela de sal, esfregue o limão e o sal na tábua. Enxague e já está pronto. ")
+        mock3.steps.append("Fogão encardido: coloque bicarbonato de sódio e água oxigenada em uma tigela e misture. Use uma esponja para limpar o foguão. ")
+        mock3.steps.append("Panela queimada: coloque a panela em fogo alto, adicione bicarbonato de sódio e água e ferva. Com uma colher de madeira esfregue o fundo até a sujeira sair. Enxague.")
+        mock3.steps.append("Panela de Ferro: adicione sal na panela e raspe com uma colher de madeira até ficar limpo. Tire todo o sal e adicione óleo vegetal, besunte dos dois lados.")
+        
+    
       
-        return [mock1,mock2,mock3,mock4,mock5]
+        return [mock1,mock2,mock3]
     }()
     
    
     
-    // Organização
+    // Diversos
     
     static var organização: [Item] = {
         let mock1 = Item(name: "")
