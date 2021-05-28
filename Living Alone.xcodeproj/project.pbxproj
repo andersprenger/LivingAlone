@@ -12,6 +12,18 @@
 		71F6009726606C5800109994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F6009626606C5800109994 /* Assets.xcassets */; };
 		71F6009A26606C5800109994 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F6009926606C5800109994 /* Preview Assets.xcassets */; };
 		71F600A626606F4600109994 /* YouTubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600A526606F4600109994 /* YouTubePlayer.swift */; };
+		71F600A82660711000109994 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600A72660711000109994 /* SearchBar.swift */; };
+		71F600AE2660725D00109994 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600AD2660725D00109994 /* Extensions.swift */; };
+		71F600B02660738900109994 /* HomeCleaningButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600AF2660738900109994 /* HomeCleaningButton.swift */; };
+		71F600B22660781000109994 /* HomeCookingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600B12660781000109994 /* HomeCookingButton.swift */; };
+		71F600B42660781F00109994 /* HomeOrganizationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600B32660781F00109994 /* HomeOrganizationButton.swift */; };
+		71F600B726607DC300109994 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600B626607DC300109994 /* HomeView.swift */; };
+		71F600BA266081B100109994 /* HomeCleaningCard1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600B9266081B100109994 /* HomeCleaningCard1.swift */; };
+		71F600BC2660878B00109994 /* HomeCleaningCard2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600BB2660878B00109994 /* HomeCleaningCard2.swift */; };
+		71F600BE266087AB00109994 /* HomeCleaningCard3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600BD266087AB00109994 /* HomeCleaningCard3.swift */; };
+		71F600C326608D7300109994 /* HomeOrganizationCard1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600C226608D7300109994 /* HomeOrganizationCard1.swift */; };
+		71F600C526608D7D00109994 /* HomeOrganizationCard2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600C426608D7D00109994 /* HomeOrganizationCard2.swift */; };
+		71F600C726608D8B00109994 /* HomeOrganizationCard3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600C626608D8B00109994 /* HomeOrganizationCard3.swift */; };
 		D0E23C2DACCBA1D1F798CCB3 /* Pods_Living_Alone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F635CE9903D11EAD7E66EE1 /* Pods_Living_Alone.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +36,18 @@
 		71F6009926606C5800109994 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71F6009B26606C5800109994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71F600A526606F4600109994 /* YouTubePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubePlayer.swift; sourceTree = "<group>"; };
+		71F600A72660711000109994 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		71F600AD2660725D00109994 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		71F600AF2660738900109994 /* HomeCleaningButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCleaningButton.swift; sourceTree = "<group>"; };
+		71F600B12660781000109994 /* HomeCookingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCookingButton.swift; sourceTree = "<group>"; };
+		71F600B32660781F00109994 /* HomeOrganizationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOrganizationButton.swift; sourceTree = "<group>"; };
+		71F600B626607DC300109994 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		71F600B9266081B100109994 /* HomeCleaningCard1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCleaningCard1.swift; sourceTree = "<group>"; };
+		71F600BB2660878B00109994 /* HomeCleaningCard2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCleaningCard2.swift; sourceTree = "<group>"; };
+		71F600BD266087AB00109994 /* HomeCleaningCard3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCleaningCard3.swift; sourceTree = "<group>"; };
+		71F600C226608D7300109994 /* HomeOrganizationCard1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOrganizationCard1.swift; sourceTree = "<group>"; };
+		71F600C426608D7D00109994 /* HomeOrganizationCard2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOrganizationCard2.swift; sourceTree = "<group>"; };
+		71F600C626608D8B00109994 /* HomeOrganizationCard3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOrganizationCard3.swift; sourceTree = "<group>"; };
 		7F635CE9903D11EAD7E66EE1 /* Pods_Living_Alone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Living_Alone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EE72BF135E9FA7C95E4FFA /* Pods-Living Alone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Living Alone.release.xcconfig"; path = "Target Support Files/Pods-Living Alone/Pods-Living Alone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,10 +104,10 @@
 			children = (
 				71F6009226606C5600109994 /* LivingAloneApp.swift */,
 				71F6009426606C5600109994 /* ContentView.swift */,
+				71F600AD2660725D00109994 /* Extensions.swift */,
 				71F600A426606F0A00109994 /* View */,
 				71F600A326606F0400109994 /* ViewModel */,
 				71F600A226606EFB00109994 /* Model */,
-				71F600A126606EF100109994 /* Util */,
 				71F6009626606C5800109994 /* Assets.xcassets */,
 				71F6009B26606C5800109994 /* Info.plist */,
 				71F6009826606C5800109994 /* Preview Content */,
@@ -103,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				71F600A526606F4600109994 /* YouTubePlayer.swift */,
+				71F600A72660711000109994 /* SearchBar.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -124,8 +149,91 @@
 		71F600A426606F0A00109994 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				71F600A92660711E00109994 /* Home */,
+				71F600AA2660713400109994 /* Cooking */,
+				71F600AB2660713E00109994 /* Cleaning */,
+				71F600AC2660714700109994 /* Organizing */,
+				71F600A126606EF100109994 /* Util */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		71F600A92660711E00109994 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				71F600B626607DC300109994 /* HomeView.swift */,
+				71F600B526607CD600109994 /* Buttons */,
+				71F600B8266080D800109994 /* Cards */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		71F600AA2660713400109994 /* Cooking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cooking;
+			sourceTree = "<group>";
+		};
+		71F600AB2660713E00109994 /* Cleaning */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cleaning;
+			sourceTree = "<group>";
+		};
+		71F600AC2660714700109994 /* Organizing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Organizing;
+			sourceTree = "<group>";
+		};
+		71F600B526607CD600109994 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				71F600AF2660738900109994 /* HomeCleaningButton.swift */,
+				71F600B12660781000109994 /* HomeCookingButton.swift */,
+				71F600B32660781F00109994 /* HomeOrganizationButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		71F600B8266080D800109994 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				71F600C026608CFF00109994 /* Cooking */,
+				71F600BF26608CE900109994 /* Cleaning */,
+				71F600C126608D1100109994 /* Organization */,
+			);
+			name = Cards;
+			sourceTree = "<group>";
+		};
+		71F600BF26608CE900109994 /* Cleaning */ = {
+			isa = PBXGroup;
+			children = (
+				71F600B9266081B100109994 /* HomeCleaningCard1.swift */,
+				71F600BB2660878B00109994 /* HomeCleaningCard2.swift */,
+				71F600BD266087AB00109994 /* HomeCleaningCard3.swift */,
+			);
+			name = Cleaning;
+			sourceTree = "<group>";
+		};
+		71F600C026608CFF00109994 /* Cooking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cooking;
+			sourceTree = "<group>";
+		};
+		71F600C126608D1100109994 /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				71F600C226608D7300109994 /* HomeOrganizationCard1.swift */,
+				71F600C426608D7D00109994 /* HomeOrganizationCard2.swift */,
+				71F600C626608D8B00109994 /* HomeOrganizationCard3.swift */,
+			);
+			name = Organization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +349,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F600C726608D8B00109994 /* HomeOrganizationCard3.swift in Sources */,
+				71F600B726607DC300109994 /* HomeView.swift in Sources */,
+				71F600BC2660878B00109994 /* HomeCleaningCard2.swift in Sources */,
+				71F600AE2660725D00109994 /* Extensions.swift in Sources */,
+				71F600B42660781F00109994 /* HomeOrganizationButton.swift in Sources */,
+				71F600C526608D7D00109994 /* HomeOrganizationCard2.swift in Sources */,
+				71F600C326608D7300109994 /* HomeOrganizationCard1.swift in Sources */,
+				71F600B22660781000109994 /* HomeCookingButton.swift in Sources */,
+				71F600BE266087AB00109994 /* HomeCleaningCard3.swift in Sources */,
+				71F600BA266081B100109994 /* HomeCleaningCard1.swift in Sources */,
+				71F600B02660738900109994 /* HomeCleaningButton.swift in Sources */,
 				71F600A626606F4600109994 /* YouTubePlayer.swift in Sources */,
+				71F600A82660711000109994 /* SearchBar.swift in Sources */,
 				71F6009526606C5600109994 /* ContentView.swift in Sources */,
 				71F6009326606C5600109994 /* LivingAloneApp.swift in Sources */,
 			);
