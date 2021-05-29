@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeOrganizationCard1: View {
     var body: some View {
         ZStack {
-            Color("OrganizationColor")
+            Color("OrganizingColor")
             
             HStack {
                 Spacer()

@@ -13,7 +13,7 @@ struct HomeOrganizationButton: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 16)
                     .frame(width: 100, height: 55)
-                    .foregroundColor(Color("OrganizationColor"))
+                    .foregroundColor(Color("OrganizingColor"))
                 
                 Image("HomeButtonOrganization")
                     .resizable()

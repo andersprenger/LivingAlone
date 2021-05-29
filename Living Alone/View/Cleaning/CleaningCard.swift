@@ -14,7 +14,7 @@ struct CleaningCard: View {
             
             VStack (alignment: .leading, spacing: 5) {
                 HStack {
-                    Text("Panqueca Americana")
+                    Text("Limpeza de Vidros")
                         .font(.system(size: 24, weight: .bold))
                     
                     if true { // colocar um teste pra ver se eh vejetariano or whatever...
@@ -41,5 +41,6 @@ struct CleaningCard: View {
 struct CleaningCard_Previews: PreviewProvider {
     static var previews: some View {
         CleaningCard()
+            .previewLayout(.fixed(width: 350, height: 153))
     }
 }

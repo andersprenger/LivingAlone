@@ -41,7 +41,6 @@ struct CookingCard: View {
 struct CookingCard_Previews: PreviewProvider {
     static var previews: some View {
         CookingCard()
-            .padding()
             .previewLayout(.fixed(width: 370, height: 153))
     }
 }
