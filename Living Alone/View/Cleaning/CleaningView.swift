@@ -7,9 +7,61 @@
 
 import SwiftUI
 
+enum CleaningSections: String, Equatable, CaseIterable {
+    case bedroom = "Bedroom"
+    case bathroom = "Bathroom"
+    case kitchen = "Kitchen"
+}
+
 struct CleaningView: View {
+    @Environment (\.presentationMode) private var presentationMode
+    
+    @State var selection: CleaningSections = .bedroom
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ZStack {
+                HStack {
+                    Text("\(Image(systemName: "chevron.backward")) Back")
+                        .padding(.leading)
+                        .foregroundColor(Color("CleaningColor"))
+                        .onTapGesture {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                    
+                    Spacer()
+                }
+                
+                Text("Cleaning")
+                    .font(.system(size: 32, weight: .bold))
+            }
+            
+            Picker("Cleaning", selection: $selection) {
+                Text("Bedroom")
+                    .tag(CleaningSections.bedroom)
+                
+                Text("Bathroom")
+                    .tag(CleaningSections.bathroom)
+                
+                Text("Kitchen")
+                    .tag(CleaningSections.kitchen)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            .onAppear {
+                UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color("CleaningColor"))
+            }
+            
+            ScrollView {
+                ForEach (0 ..< 10) { _ in
+                    CleaningCard()
+                        .padding(.horizontal)
+                }
+            }
+            
+            Spacer()
+        }
+        .navigationBarHidden(true)
     }
 }
 

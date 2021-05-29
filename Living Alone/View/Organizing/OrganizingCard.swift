@@ -13,16 +13,12 @@ struct OrganizingCard: View {
             Color("OrganizingColor")
             
             VStack (alignment: .leading, spacing: 5) {
-                Text("Panqueca Americana")
+                Text("Dobrar roupas")
                     .font(.system(size: 24, weight: .bold))
                 
-                Text ("Misture em um recipiente: a farinha, o açúcar, o fermento e o sal. Em outro recipiente, misture os ovos, o leite e a manteiga.")
+                Text ("Misture todos os ingredientes em uma garrafa pequena com borrifador. Complete com água e chacoalhe bem...")
                     .font(.system(size: 14, weight: .regular))
-                    
-                    .frame(height: 23)
-                
-                Text("\(Image(systemName: "stopwatch.fill")) \(40) min")
-                    .font(.system(size: 14, weight: .bold))
+                    .frame(height: 40)
             }
             .foregroundColor(.white)
             .padding()
