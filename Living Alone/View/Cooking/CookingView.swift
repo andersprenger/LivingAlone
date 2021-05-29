@@ -17,6 +17,7 @@ struct CookingView: View {
     @Environment (\.presentationMode) private var presentationMode
     
     @State var selection: CookingSections = .breakfest
+    @State var showDetails: Bool = false
     
     var body: some View {
         VStack {
@@ -56,6 +57,12 @@ struct CookingView: View {
                 ForEach (0 ..< 10) { _ in
                     CookingCard()
                         .padding(.horizontal)
+                }
+                .sheet(isPresented: $showDetails, content: {
+                    CookingDetails()
+                })
+                .onTapGesture {
+                    showDetails.toggle()
                 }
             }
             
