@@ -16,7 +16,8 @@ struct OrganizingView: View {
     @Environment (\.presentationMode) private var presentationMode
     
     @State var selection: OrganizingSections = .bedroom
-    
+    @State var showDetails: Bool = false
+
     var body: some View {
         VStack {
             ZStack {
@@ -53,11 +54,18 @@ struct OrganizingView: View {
                     OrganizingCard()
                         .padding(.horizontal)
                 }
+                .sheet(isPresented: $showDetails, content: {
+                    OrganizingDetails()
+                })
+                .onTapGesture {
+                    showDetails.toggle()
+                }
             }
             
             Spacer()
         }
         .navigationBarHidden(true)
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 

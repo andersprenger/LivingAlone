@@ -17,6 +17,7 @@ struct CleaningView: View {
     @Environment (\.presentationMode) private var presentationMode
     
     @State var selection: CleaningSections = .bedroom
+    @State var showDetails: Bool = false
     
     var body: some View {
         VStack {
@@ -57,11 +58,18 @@ struct CleaningView: View {
                     CleaningCard()
                         .padding(.horizontal)
                 }
+                .sheet(isPresented: $showDetails, content: {
+                    CleaningDetails()
+                })
+                .onTapGesture {
+                    showDetails.toggle()
+                }
             }
             
             Spacer()
         }
         .navigationBarHidden(true)
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 

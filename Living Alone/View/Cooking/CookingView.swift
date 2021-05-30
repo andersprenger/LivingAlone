@@ -69,6 +69,7 @@ struct CookingView: View {
             Spacer()
         }
         .navigationBarHidden(true)
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 
