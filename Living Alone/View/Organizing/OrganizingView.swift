@@ -7,15 +7,10 @@
 
 import SwiftUI
 
-enum OrganizingSections: String, Equatable, CaseIterable {
-    case bedroom = "Bedroom"
-    case closet = "Closet"
-}
-
 struct OrganizingView: View {
     @Environment (\.presentationMode) private var presentationMode
     
-    @State var selection: OrganizingSections = .bedroom
+    @State var selection: OrganizingCategories = .bedroom
     @State var showDetails: Bool = false
 
     var body: some View {
@@ -38,10 +33,10 @@ struct OrganizingView: View {
             
             Picker("Cooking", selection: $selection) {
                 Text("Bedroom")
-                    .tag(OrganizingSections.bedroom)
+                    .tag(OrganizingCategories.bedroom)
                 
                 Text("Closet")
-                    .tag(OrganizingSections.closet)
+                    .tag(OrganizingCategories.closet)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()

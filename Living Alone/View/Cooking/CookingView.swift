@@ -7,16 +7,10 @@
 
 import SwiftUI
 
-enum CookingSections: String, Equatable, CaseIterable {
-    case breakfest = "Breakfest"
-    case lunch = "Lunch"
-    case desert = "Desert"
-}
-
 struct CookingView: View {
     @Environment (\.presentationMode) private var presentationMode
     
-    @State var selection: CookingSections = .breakfest
+    @State var selection: CookingCategories = .breakfest
     @State var showDetails: Bool = false
     
     var body: some View {
@@ -39,13 +33,13 @@ struct CookingView: View {
             
             Picker("Cooking", selection: $selection) {
                 Text("Breakfest")
-                    .tag(CookingSections.breakfest)
+                    .tag(CookingCategories.breakfest)
                 
                 Text("Lunch")
-                    .tag(CookingSections.lunch)
+                    .tag(CookingCategories.lunch)
                 
                 Text("Desert")
-                    .tag(CookingSections.desert)
+                    .tag(CookingCategories.desert)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
