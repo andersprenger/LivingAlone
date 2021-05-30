@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7118AE2726631B7C00FDFD06 /* RecipeTipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2626631B7C00FDFD06 /* RecipeTipModel.swift */; };
+		7118AE2926631B9E00FDFD06 /* CleaningTipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2826631B9E00FDFD06 /* CleaningTipModel.swift */; };
+		7118AE2B26631BB200FDFD06 /* OrganizingTipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2A26631BB200FDFD06 /* OrganizingTipModel.swift */; };
+		7118AE2D26631BC800FDFD06 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2C26631BC800FDFD06 /* Tip.swift */; };
 		71F6009326606C5600109994 /* LivingAloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6009226606C5600109994 /* LivingAloneApp.swift */; };
 		71F6009526606C5600109994 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6009426606C5600109994 /* ContentView.swift */; };
 		71F6009726606C5800109994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F6009626606C5800109994 /* Assets.xcassets */; };
@@ -43,6 +47,10 @@
 
 /* Begin PBXFileReference section */
 		0DD2EA9017F303C60E701CC0 /* Pods-Living Alone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Living Alone.debug.xcconfig"; path = "Target Support Files/Pods-Living Alone/Pods-Living Alone.debug.xcconfig"; sourceTree = "<group>"; };
+		7118AE2626631B7C00FDFD06 /* RecipeTipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTipModel.swift; sourceTree = "<group>"; };
+		7118AE2826631B9E00FDFD06 /* CleaningTipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningTipModel.swift; sourceTree = "<group>"; };
+		7118AE2A26631BB200FDFD06 /* OrganizingTipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizingTipModel.swift; sourceTree = "<group>"; };
+		7118AE2C26631BC800FDFD06 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		71F6008F26606C5600109994 /* Living Alone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Living Alone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F6009226606C5600109994 /* LivingAloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingAloneApp.swift; sourceTree = "<group>"; };
 		71F6009426606C5600109994 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -163,6 +171,10 @@
 		71F600A226606EFB00109994 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7118AE2626631B7C00FDFD06 /* RecipeTipModel.swift */,
+				7118AE2826631B9E00FDFD06 /* CleaningTipModel.swift */,
+				7118AE2A26631BB200FDFD06 /* OrganizingTipModel.swift */,
+				7118AE2C26631BC800FDFD06 /* Tip.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -393,12 +405,15 @@
 			files = (
 				71F600C726608D8B00109994 /* HomeOrganizationCard3.swift in Sources */,
 				71F600E526614DB700109994 /* OrganizingDetails.swift in Sources */,
+				7118AE2926631B9E00FDFD06 /* CleaningTipModel.swift in Sources */,
+				7118AE2D26631BC800FDFD06 /* Tip.swift in Sources */,
 				71F600D32660A1B800109994 /* CookingView.swift in Sources */,
 				71F600CB2660942500109994 /* HomeCookingCard2.swift in Sources */,
 				71F600E326614DAC00109994 /* CleaningDetails.swift in Sources */,
 				71F600B726607DC300109994 /* HomeView.swift in Sources */,
 				71F600BC2660878B00109994 /* HomeCleaningCard2.swift in Sources */,
 				71F600AE2660725D00109994 /* Extensions.swift in Sources */,
+				7118AE2B26631BB200FDFD06 /* OrganizingTipModel.swift in Sources */,
 				71F600B42660781F00109994 /* HomeOrganizationButton.swift in Sources */,
 				71F600DD2660A2CE00109994 /* CleaningCard.swift in Sources */,
 				71F600C526608D7D00109994 /* HomeOrganizationCard2.swift in Sources */,
@@ -408,6 +423,7 @@
 				71F600D92660A20700109994 /* OrganizingView.swift in Sources */,
 				71F600BE266087AB00109994 /* HomeCleaningCard3.swift in Sources */,
 				71F600BA266081B100109994 /* HomeCleaningCard1.swift in Sources */,
+				7118AE2726631B7C00FDFD06 /* RecipeTipModel.swift in Sources */,
 				71F600DF2660A2DC00109994 /* OrganizingCard.swift in Sources */,
 				71F600B02660738900109994 /* HomeCleaningButton.swift in Sources */,
 				71F600A626606F4600109994 /* YouTubePlayer.swift in Sources */,
