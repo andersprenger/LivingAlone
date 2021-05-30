@@ -15,7 +15,7 @@ enum CookingCategories: String, Equatable, CaseIterable {
     case desert = "Desert"
 }
 
-struct RecipeTipModel: Tip {
+struct RecipeModel: Tip {
     var topic: Topic = Topic.cooking
     var title: String
     var imageName: String
@@ -24,7 +24,7 @@ struct RecipeTipModel: Tip {
     
     var time: Int
     var servings: Int
-    var vegetarian: Bool
+    var vegan: Bool
     
     var ingredients: [String]
     var structions: String

@@ -49,11 +49,11 @@ struct CookingView: View {
             
             ScrollView {
                 ForEach (0 ..< 10) { _ in
-                    CookingCard(recipe: ViewModel.shared.tipsList[0] as! RecipeTipModel)
+                    CookingCard(recipe: ViewModel.shared.recipesList[0])
                         .padding(.horizontal)
                 }
                 .sheet(isPresented: $showDetails, content: {
-                    CookingDetails(recipe: ViewModel.shared.tipsList[0] as! RecipeTipModel)
+                    CookingDetails(recipe: ViewModel.shared.recipesList[0])
                 })
                 .onTapGesture {
                     showDetails.toggle()
@@ -66,12 +66,8 @@ struct CookingView: View {
         .ignoresSafeArea(edges: .bottom)
     }
     
-    func filterCookingTips(category: CookingCategories) -> [RecipeTipModel] {
-        let recipes: [RecipeTipModel] = ViewModel.shared.tipsList.filter { tip in
-            tip.topic == .cooking
-        } as! [RecipeTipModel]
-        
-        return recipes.filter { recipe in
+    func filterCookingTips(category: CookingCategories) -> [RecipeModel] {
+        ViewModel.shared.recipesList.filter { recipe in
             recipe.category == category
         }
     }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7118AE2726631B7C00FDFD06 /* RecipeTipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2626631B7C00FDFD06 /* RecipeTipModel.swift */; };
+		7118AE2726631B7C00FDFD06 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2626631B7C00FDFD06 /* RecipeModel.swift */; };
 		7118AE2926631B9E00FDFD06 /* CleaningTipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2826631B9E00FDFD06 /* CleaningTipModel.swift */; };
 		7118AE2B26631BB200FDFD06 /* OrganizingTipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2A26631BB200FDFD06 /* OrganizingTipModel.swift */; };
 		7118AE2D26631BC800FDFD06 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2C26631BC800FDFD06 /* Tip.swift */; };
@@ -48,7 +48,7 @@
 
 /* Begin PBXFileReference section */
 		0DD2EA9017F303C60E701CC0 /* Pods-Living Alone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Living Alone.debug.xcconfig"; path = "Target Support Files/Pods-Living Alone/Pods-Living Alone.debug.xcconfig"; sourceTree = "<group>"; };
-		7118AE2626631B7C00FDFD06 /* RecipeTipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTipModel.swift; sourceTree = "<group>"; };
+		7118AE2626631B7C00FDFD06 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		7118AE2826631B9E00FDFD06 /* CleaningTipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningTipModel.swift; sourceTree = "<group>"; };
 		7118AE2A26631BB200FDFD06 /* OrganizingTipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizingTipModel.swift; sourceTree = "<group>"; };
 		7118AE2C26631BC800FDFD06 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		71F600A226606EFB00109994 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7118AE2626631B7C00FDFD06 /* RecipeTipModel.swift */,
+				7118AE2626631B7C00FDFD06 /* RecipeModel.swift */,
 				7118AE2826631B9E00FDFD06 /* CleaningTipModel.swift */,
 				7118AE2A26631BB200FDFD06 /* OrganizingTipModel.swift */,
 				7118AE2C26631BC800FDFD06 /* Tip.swift */,
@@ -427,7 +427,7 @@
 				71F600D92660A20700109994 /* OrganizingView.swift in Sources */,
 				71F600BE266087AB00109994 /* HomeCleaningCard3.swift in Sources */,
 				71F600BA266081B100109994 /* HomeCleaningCard1.swift in Sources */,
-				7118AE2726631B7C00FDFD06 /* RecipeTipModel.swift in Sources */,
+				7118AE2726631B7C00FDFD06 /* RecipeModel.swift in Sources */,
 				71F600DF2660A2DC00109994 /* OrganizingCard.swift in Sources */,
 				71F600B02660738900109994 /* HomeCleaningButton.swift in Sources */,
 				71F600A626606F4600109994 /* YouTubePlayer.swift in Sources */,

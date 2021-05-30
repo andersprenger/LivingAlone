@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CookingCard: View {
-    let recipe: RecipeTipModel
+    let recipe: RecipeModel
     
     var body: some View {
         ZStack {
@@ -19,7 +19,7 @@ struct CookingCard: View {
                     Text(recipe.title)
                         .font(.system(size: 24, weight: .bold))
                     
-                    if recipe.vegetarian {
+                    if recipe.vegan {
                         Image(systemName: "leaf.fill")
                     }
                 }
@@ -42,7 +42,7 @@ struct CookingCard: View {
 
 struct CookingCard_Previews: PreviewProvider {
     static var previews: some View {
-        CookingCard(recipe: ViewModel.shared.tipsList[0] as! RecipeTipModel)
+        CookingCard(recipe: ViewModel.shared.recipesList[0])
             .previewLayout(.fixed(width: 370, height: 153))
     }
 }

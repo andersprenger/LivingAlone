@@ -10,7 +10,7 @@ import SwiftUI
 struct CookingDetails: View {
     @Environment (\.presentationMode) private var presentationMode
     
-    var recipe: RecipeTipModel = ViewModel.shared.tipsList[1] as! RecipeTipModel
+    var recipe: RecipeModel = ViewModel.shared.recipesList[1]
 
     var body: some View {
         ScrollView {
@@ -59,7 +59,7 @@ struct CookingDetails: View {
                     }
                     .frame(width: 92, height: 39)
                     
-                    if recipe.vegetarian {
+                    if recipe.vegan {
                         ZStack {
                             RoundedRectangle(cornerRadius: 12)
                                 .foregroundColor(Color("CookingColor"))
