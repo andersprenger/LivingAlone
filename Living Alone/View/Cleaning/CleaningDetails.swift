@@ -31,7 +31,7 @@ struct CleaningDetails: View {
                 }
                 .padding()
                 
-                Image("ContentPanqueca")
+                Image("CleaningContent")
                     .resizable()
                     .scaledToFill()
                     .frame(height: 252)
