@@ -9,12 +9,14 @@ import SwiftUI
 
 struct CookingDetails: View {
     @Environment (\.presentationMode) private var presentationMode
+    
+    var recipe: RecipeTipModel = ViewModel.shared.tipsList[1] as! RecipeTipModel
 
     var body: some View {
         ScrollView {
             VStack (alignment: .leading, spacing: 0){
                 ZStack {
-                    Text("Panqueca Americana")
+                    Text(recipe.title)
                         .font(.system(size: 17, weight: .bold))
                     
                     HStack {
@@ -31,10 +33,45 @@ struct CookingDetails: View {
                 }
                 .padding()
                 
-                Image("ContentPanqueca")
+                Image(recipe.imageName)
                     .resizable()
                     .scaledToFill()
                     .frame(height: 252)
+                
+                HStack {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 12)
+                            .foregroundColor(Color("CookingColor"))
+                        
+                        Text("\(Image(systemName: "stopwatch.fill")) \(recipe.time) min")
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 92, height: 39)
+                    
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 12)
+                            .foregroundColor(Color("CookingColor"))
+                        
+                        Text(recipe.servings == 1 ? "1 Porção" : "\(recipe.servings) Porções")
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 92, height: 39)
+                    
+                    if recipe.vegetarian {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(Color("CookingColor"))
+                            
+                            Text("\(Image(systemName: "leaf.fill")) Veg")
+                                .font(.system(size: 18, weight: .bold))
+                                .foregroundColor(.white)
+                        }
+                        .frame(width: 92, height: 39)
+                    }
+                }
+                .padding([.top, .horizontal])
                 
                 VStack(alignment: .leading) {
                     HStack {
@@ -47,19 +84,12 @@ struct CookingDetails: View {
                     .padding(.bottom, 5)
                     
                     VStack (alignment: .leading, spacing: 5) {
-                        Text("1 e 1/4 xícara (chá) de farinha de trigo")
-                        Text("1 colher (sopa) de açúcar")
-                        Text("3 colheres (chá) de fermento em pó")
-                        Text("2 ovos levemente batidos")
-                        Text("1 xícara (chá) de leite")
-                        Text("2 colheres (sopa) de manteiga derretida")
-                        Text("pitada de sal")
-                        Text("óleo")
-                        HStack{
-                            Spacer()
+                        ForEach (recipe.ingredients, id: \.self) { ingredient in
+                            Text(ingredient)
                         }
                     }
-                    
+                    .padding(.bottom, 5)
+
                     HStack {
                         Text("Modo de Preparo")
                             .font(.system(size: 24, weight: .bold))
@@ -69,12 +99,7 @@ struct CookingDetails: View {
                     }
                     .padding(.bottom, 5)
                     
-                    VStack (alignment: .leading, spacing: 5) {
-                        Text("Misture em um recipiente: a farinha, o açúcar, o fermento e o sal. Em outro recipiente, misture os ovos, o leite e a manteiga.")
-                        Text("Acrescente os líquidos aos secos, sem misturar em excesso. O ponto da massa não deve ser muito líquido, deve escorrer lentamente.")
-                        Text("Aqueça e unte a frigideira com óleo, coloque a massa no centro, cerca de 1/4 xícara por panqueca.")
-                        Text("Vire a massa para assar do outro lado e está pronto!")
-                    }
+                    Text(recipe.structions)
                     
                 }
                 .padding()
