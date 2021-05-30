@@ -20,8 +20,10 @@ struct CleaningTipModel: Tip {
     var imageName: String
     
     var category: CleaningCategories
+    
     var extendedTitle: String?
     var description: String?
     var instructionsHeader: String?
+    
     var instructions: [String]
 }

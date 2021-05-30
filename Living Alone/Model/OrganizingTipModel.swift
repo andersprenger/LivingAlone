@@ -18,8 +18,10 @@ struct OrganizingTipModel: Tip {
     var imageName: String
     
     var category: OrganizingCategories
+    
     var extendedTitle: String?
     var description: String?
     var instructionsHeader: String?
+    
     var instructions: [String]
 }

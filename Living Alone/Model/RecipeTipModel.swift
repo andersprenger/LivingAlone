@@ -21,9 +21,11 @@ struct RecipeTip: Tip {
     var imageName: String
 
     var category: CookingCategories
+    
     var time: Int
     var servings: Int
     var vegetarian: Bool
+    
     var ingredients: [String]
     var structions: String
 }
