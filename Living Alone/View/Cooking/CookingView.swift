@@ -10,8 +10,9 @@ import SwiftUI
 struct CookingView: View {
     @Environment (\.presentationMode) private var presentationMode
     
-    @State var selection: CookingCategories = .breakfest
-    @State var showDetails: Bool = false
+    @State private var pickerSelection: CookingCategories = .breakfest
+    @State private var showDetails: Bool = false
+    @State private var sheetSelection: RecipeModel = ViewModel.shared.recipesList[0]
     
     var body: some View {
         VStack {
@@ -31,7 +32,7 @@ struct CookingView: View {
                     .font(.system(size: 32, weight: .bold))
             }
             
-            Picker("Cooking", selection: $selection) {
+            Picker("Cooking", selection: $pickerSelection) {
                 Text("Breakfest")
                     .tag(CookingCategories.breakfest)
                 
@@ -48,17 +49,18 @@ struct CookingView: View {
             }
             
             ScrollView {
-                ForEach (0 ..< 10) { _ in
-                    CookingCard(recipe: ViewModel.shared.recipesList[0])
+                ForEach (filterRecipes(category: pickerSelection)) { recipe in
+                    CookingCard(recipe: recipe)
                         .padding(.horizontal)
-                }
-                .sheet(isPresented: $showDetails, content: {
-                    CookingDetails(recipe: ViewModel.shared.recipesList[0])
-                })
-                .onTapGesture {
-                    showDetails.toggle()
+                        .onTapGesture {
+                            showDetails.toggle()
+                            sheetSelection = recipe
+                        }
                 }
             }
+            .sheet(isPresented: $showDetails, content: {
+                CookingDetails(recipe: sheetSelection)
+            })
             
             Spacer()
         }
@@ -66,7 +68,7 @@ struct CookingView: View {
         .ignoresSafeArea(edges: .bottom)
     }
     
-    func filterCookingTips(category: CookingCategories) -> [RecipeModel] {
+    func filterRecipes(category: CookingCategories) -> [RecipeModel] {
         ViewModel.shared.recipesList.filter { recipe in
             recipe.category == category
         }

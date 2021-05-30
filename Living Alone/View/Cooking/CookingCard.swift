@@ -22,6 +22,8 @@ struct CookingCard: View {
                     if recipe.vegan {
                         Image(systemName: "leaf.fill")
                     }
+                    
+                    Spacer()
                 }
                 
                 Text (recipe.structions)

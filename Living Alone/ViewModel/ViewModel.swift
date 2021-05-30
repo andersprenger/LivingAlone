@@ -7,12 +7,12 @@
 
 import Foundation
 
-class ViewModel {
+class ViewModel: ObservableObject {
     static let shared: ViewModel = ViewModel()
     
-    var recipesList: [RecipeModel] = []
-    var cleaningTipsList: [CleaningTipModel] = []
-    var organizingTipsList: [OrganizingTipModel] = []
+    @Published var recipesList: [RecipeModel] = []
+    @Published var cleaningTipsList: [CleaningTipModel] = []
+    @Published var organizingTipsList: [OrganizingTipModel] = []
     
     init() { // inserir dados abaixo!
         

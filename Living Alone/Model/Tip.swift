@@ -13,7 +13,7 @@ enum Topic {
     case organizing
 }
 
-protocol Tip {
+protocol Tip: Hashable, Identifiable {
     var topic: Topic { get }
     var title: String { get }
     var imageName: String { get }

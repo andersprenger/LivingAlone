@@ -10,7 +10,7 @@ import SwiftUI
 struct CookingDetails: View {
     @Environment (\.presentationMode) private var presentationMode
     
-    var recipe: RecipeModel = ViewModel.shared.recipesList[1]
+    var recipe: RecipeModel
 
     var body: some View {
         ScrollView {
@@ -37,6 +37,7 @@ struct CookingDetails: View {
                     .resizable()
                     .scaledToFill()
                     .frame(height: 252)
+                    .clipped()
                 
                 HStack {
                     ZStack {
@@ -112,6 +113,6 @@ struct CookingDetails: View {
 
 struct CookingDetails_Previews: PreviewProvider {
     static var previews: some View {
-        CookingDetails()
+        CookingDetails(recipe: ViewModel.shared.recipesList[0])
     }
 }

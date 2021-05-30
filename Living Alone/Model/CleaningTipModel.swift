@@ -15,6 +15,8 @@ enum CleaningCategories: String, Equatable, CaseIterable {
 }
 
 struct CleaningTipModel: Tip {
+    var id: UUID = UUID()
+
     var topic: Topic = Topic.cleaning
     var title: String
     var imageName: String
