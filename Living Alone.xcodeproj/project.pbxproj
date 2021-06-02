@@ -90,6 +90,7 @@
 		71F600E426614DB700109994 /* OrganizingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizingDetails.swift; sourceTree = "<group>"; };
 		71FCE13F26682D23008FAACD /* CleaningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningViewModel.swift; sourceTree = "<group>"; };
 		71FCE14126682D2D008FAACD /* OrganizingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizingViewModel.swift; sourceTree = "<group>"; };
+		71FCE1432668365B008FAACD /* Living Alone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Living Alone.entitlements"; sourceTree = "<group>"; };
 		7F635CE9903D11EAD7E66EE1 /* Pods_Living_Alone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Living_Alone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EE72BF135E9FA7C95E4FFA /* Pods-Living Alone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Living Alone.release.xcconfig"; path = "Target Support Files/Pods-Living Alone/Pods-Living Alone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +145,7 @@
 		71F6009126606C5600109994 /* Living Alone */ = {
 			isa = PBXGroup;
 			children = (
+				71FCE1432668365B008FAACD /* Living Alone.entitlements */,
 				71F6009226606C5600109994 /* LivingAloneApp.swift */,
 				71F6009426606C5600109994 /* ContentView.swift */,
 				71F600AD2660725D00109994 /* Extensions.swift */,
@@ -576,6 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Living Alone/Living Alone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Living Alone/Preview Content\"";
 				DEVELOPMENT_TEAM = M7DG8QRAF9;
@@ -599,6 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Living Alone/Living Alone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Living Alone/Preview Content\"";
 				DEVELOPMENT_TEAM = M7DG8QRAF9;
