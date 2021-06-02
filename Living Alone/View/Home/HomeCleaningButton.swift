@@ -23,7 +23,7 @@ struct HomeCleaningButton: View {
             }
             .frame(width: 100, height: 100)
             
-            Text("Cleaning")
+            Text("Limpeza")
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundColor(Color("DynamicColor"))
                 .padding(.top, -6)

@@ -24,7 +24,7 @@ struct HomeCookingButton: View {
             .frame(width: 100, height: 100)
             
             
-            Text("Cooking")
+            Text("Cozinha")
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundColor(Color("DynamicColor"))
                 .padding(.top, -14)

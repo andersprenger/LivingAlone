@@ -23,7 +23,7 @@ struct HomeOrganizationButton: View {
             }
             .frame(width: 100, height: 100)
             
-            Text("Organization")
+            Text("Organização")
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundColor(Color("DynamicColor"))
                 .padding(.top, -14)            }
