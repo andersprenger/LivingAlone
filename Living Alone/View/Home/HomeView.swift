@@ -13,7 +13,7 @@ struct HomeView: View {
     @ObservedObject private var cookingViewModel: CookingViewModel = CookingViewModel()
     @ObservedObject private var cleaningViewModel: CleaningViewModel = CleaningViewModel()
     @ObservedObject private var organizingViewModel: OrganizingViewModel = OrganizingViewModel()
-
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -102,6 +102,9 @@ struct HomeView: View {
             }
             .navigationBarHidden(true)
         }
+        .onAppear {
+            UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        } // muda a cor do texto dos pickers selecionados para branco em todos os SegmentedControl do app
     }
 }
 
