@@ -27,7 +27,72 @@ struct HomeView: View {
                         .padding()
                     
                     if isSearching {
-                        
+                        ScrollView {
+                            VStack {
+                                VStack {
+                                    HStack {
+                                        Text("Cozinha")
+                                            .font(.system(size: 18, weight: .bold))
+                                            .padding(.leading)
+
+                                        Spacer()
+                                    }
+                                    
+                                    ForEach (cookingViewModel.search(text: searchText)) { recipe in
+                                        CookingCard(recipe: recipe)
+                                            .padding(.horizontal)
+                                            .onTapGesture {
+                                                selectedCookingSheet = recipe
+                                            }
+                                    }
+                                }
+                                .sheet(item: $selectedCookingSheet) { recipe in
+                                    CookingDetails(recipe: recipe)
+                                }
+                                
+                                VStack {
+                                    HStack {
+                                        Text("Limpeza")
+                                            .font(.system(size: 18, weight: .bold))
+                                            .padding(.leading)
+
+                                        Spacer()
+                                    }
+                                    
+                                    ForEach (cleaningViewModel.search(text: searchText)) { tip in
+                                        CleaningCard(tip: tip)
+                                            .padding(.horizontal)
+                                            .onTapGesture {
+                                                selectedCleaningSheet = tip
+                                            }
+                                    }
+                                }
+                                .sheet(item: $selectedCleaningSheet) { tip in
+                                    CleaningDetails(tip: tip)
+                                }
+                                
+                                VStack {
+                                    HStack {
+                                        Text("Organização")
+                                            .font(.system(size: 18, weight: .bold))
+                                            .padding(.leading)
+
+                                        Spacer()
+                                    }
+                                    
+                                    ForEach (organizingViewModel.search(text: searchText)) { tip in
+                                        OrganizingCard(tip: tip)
+                                            .padding(.horizontal)
+                                            .onTapGesture {
+                                                selectedOrganizingSheet = tip
+                                            }
+                                    }
+                                }
+                                .sheet(item: $selectedOrganizingSheet) { tip in
+                                    OrganizingDetails(tip: tip)
+                                }
+                            }
+                        }
                     } else {
                         HStack (alignment: .center) {
                             NavigationLink (destination: CookingView(viewModel: cookingViewModel)){
