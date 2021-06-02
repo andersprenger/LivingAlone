@@ -14,6 +14,10 @@ struct HomeView: View {
     @ObservedObject private var cleaningViewModel: CleaningViewModel = CleaningViewModel()
     @ObservedObject private var organizingViewModel: OrganizingViewModel = OrganizingViewModel()
     
+    @State private var selectedCookingSheet: RecipeModel?
+    @State private var selectedCleaningSheet: CleaningTipModel?
+    @State private var selectedOrganizingSheet: OrganizingTipModel?
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -46,18 +50,36 @@ struct HomeView: View {
                                 Spacer()
                                 
                                 HomeCookingCard1()
+                                    .onTapGesture {
+                                        selectedCookingSheet = cookingViewModel.recipesList[5]
+                                    }
                                 
                                 HomeCookingCard2()
+                                    .onTapGesture {
+                                        selectedCookingSheet = cookingViewModel.recipesList[8]
+                                    }
                                 
                                 HomeCookingCard3()
+                                    .onTapGesture {
+                                        selectedCookingSheet = cookingViewModel.recipesList[7]
+                                    }
                                 
                                 HomeCookingCard4()
+                                    .onTapGesture {
+                                        selectedCookingSheet = cookingViewModel.recipesList[0]
+                                    }
                                 
                                 HomeCookingCard5()
+                                    .onTapGesture {
+                                        selectedCookingSheet = cookingViewModel.recipesList[12]
+                                    }
                             }
                         }
                     }
                     .padding(.vertical)
+                    .sheet(item: $selectedCookingSheet) { recipe in
+                        CookingDetails(recipe: recipe)
+                    }
                     
                     VStack (alignment: .leading) {
                         Text("Limpeza")
@@ -69,14 +91,24 @@ struct HomeView: View {
                                 Spacer()
                                 
                                 HomeCleaningCard1()
-                                
+                                    .onTapGesture {
+                                        selectedCleaningSheet = cleaningViewModel.cleaningTipsList[2]
+                                    }
                                 HomeCleaningCard2()
-                                
+                                    .onTapGesture {
+                                        selectedCleaningSheet = cleaningViewModel.cleaningTipsList[1] // FIXME: -- change this
+                                    }
                                 HomeCleaningCard3()
+                                    .onTapGesture {
+                                        selectedCleaningSheet = cleaningViewModel.cleaningTipsList[3]
+                                    }
                             }
                         }
                     }
                     .padding(.vertical)
+                    .sheet(item: $selectedCleaningSheet) { tip in
+                        CleaningDetails(tip: tip)
+                    }
                     
                     VStack (alignment: .leading) {
                         Text("Organização")
@@ -88,14 +120,24 @@ struct HomeView: View {
                                 Spacer()
                                 
                                 HomeOrganizationCard1()
-                                
+                                    .onTapGesture {
+                                        selectedOrganizingSheet = organizingViewModel.organizingTipsList[2] // FIXME: -- change this
+                                    }
                                 HomeOrganizationCard2()
-                                
+                                    .onTapGesture {
+                                        selectedOrganizingSheet = organizingViewModel.organizingTipsList[1] // FIXME: -- change this
+                                    }
                                 HomeOrganizationCard3()
+                                    .onTapGesture {
+                                        selectedOrganizingSheet = organizingViewModel.organizingTipsList[0]
+                                    }
                             }
                         }
                     }
                     .padding(.vertical)
+                    .sheet(item: $selectedOrganizingSheet) { tip in
+                        OrganizingDetails(tip: tip)
+                    }
                     
                     Spacer()
                 }
