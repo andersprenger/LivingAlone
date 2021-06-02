@@ -22,7 +22,7 @@ class CookingViewModel: ObservableObject {
         
         let omelete = RecipeModel(
             title: "Omelete",
-            imageName: "OmeleteContent",
+            imageName: "ContentOmelete",
             category: .breakfest,
             time: 4,
             servings: 1,
@@ -37,7 +37,7 @@ class CookingViewModel: ObservableObject {
         
         let panquecaAmericana = RecipeModel(
             title: "Panqueca Americana",
-            imageName: "PanquecasContent",
+            imageName: "ContentPanquecaAmericana",
             category: .breakfest,
             time: 40,
             servings: 8,
@@ -54,7 +54,7 @@ class CookingViewModel: ObservableObject {
         
         let aveia = RecipeModel(
             title: "Mingau",
-            imageName: "Mingau",
+            imageName: "ContentMingau",
             category: .breakfest,
             time: 15,
             servings: 1,
@@ -70,7 +70,7 @@ class CookingViewModel: ObservableObject {
         
         let muffinDeBanana = RecipeModel(
             title: "Mufflin de Banana",
-            imageName: "MuflinBanana",
+            imageName: "ContentMuflinBanana",
             category: .breakfest,
             time: 35,
             servings: 10,
@@ -91,7 +91,7 @@ class CookingViewModel: ObservableObject {
         
         let cafeGelado = RecipeModel(
             title: "Café Gelado",
-            imageName: "ArrozContent",
+            imageName: "ContentCafeGelado",
             category: .breakfest,
             time: 15,
             servings: 2,
@@ -104,7 +104,7 @@ class CookingViewModel: ObservableObject {
         
         let arroz = RecipeModel(
             title: "Arroz",
-            imageName: "ArrozContent",
+            imageName: "ContentArroz",
             category: .lunch,
             time: 20,
             servings: 3,
@@ -119,7 +119,7 @@ class CookingViewModel: ObservableObject {
         
         let almondegas = RecipeModel(
             title: "Almondegas",
-            imageName: "ArrozContent",
+            imageName: "ContentAlmondegas",
             category: .lunch,
             time: 60,
             servings: 4,
@@ -136,7 +136,7 @@ class CookingViewModel: ObservableObject {
         
         let strogonoff = RecipeModel(
             title: "Strogonoff",
-            imageName: "ArrozContent",
+            imageName: "ContentStrogonoff",
             category: .lunch,
             time: 60,
             servings: 10,
@@ -156,7 +156,7 @@ class CookingViewModel: ObservableObject {
         
         let panqueca = RecipeModel(
             title: "Panqueca Salgada",
-            imageName: "ArrozContent",
+            imageName: "ContentPanquecaSalgada",
             category: .lunch,
             time: 40,
             servings: 10,
@@ -180,7 +180,7 @@ class CookingViewModel: ObservableObject {
         
         let macarrao = RecipeModel(
             title: "Macarrão com bacon e molho branco",
-            imageName: "ArrozContent",
+            imageName: "ContentMacarrao",
             category: .lunch,
             time: 30,
             servings: 6,
@@ -200,7 +200,7 @@ class CookingViewModel: ObservableObject {
         
         let brigadeirao = RecipeModel(
             title: "Brigadeirão",
-            imageName: "ArrozContent",
+            imageName: "ContentBrigadeirao",
             category: .desert,
             time: 240,
             servings: 1,
@@ -217,7 +217,7 @@ class CookingViewModel: ObservableObject {
         
         let copinhosChocolate = RecipeModel(
             title: "Copinhos de chocolate recheados",
-            imageName: "ArrozContent",
+            imageName: "ContentCopinhosChocolate",
             category: .desert,
             time: 45,
             servings: 6,
@@ -229,7 +229,7 @@ class CookingViewModel: ObservableObject {
         
         let mouseChocolateVegano = RecipeModel(
             title: "Mousse de chocolate vegano",
-            imageName: "ArrozContent",
+            imageName: "ContentMousseVegano",
             category: .desert,
             time: 120,
             servings: 3,
@@ -243,7 +243,7 @@ class CookingViewModel: ObservableObject {
         
         let brigadeiro = RecipeModel(
             title: "Brigadeiro",
-            imageName: "ArrozContent",
+            imageName: "ContentBrigadeiro",
             category: .desert,
             time: 25,
             servings: 30,
@@ -256,7 +256,7 @@ class CookingViewModel: ObservableObject {
         
         let mouseMaracuja = RecipeModel(
             title: "Mousse de Maracujá",
-            imageName: "ArrozContent",
+            imageName: "ContentMousseMaracuja",
             category: .desert,
             time: 15,
             servings: 6,
@@ -270,24 +270,24 @@ class CookingViewModel: ObservableObject {
             structions: "Prepare a gelatina com a água quente. Depois é só bater todos os ingredientes no liquidificador e colocar numa travessa para gelar.")
         
         // breakfest
-        recipesList.append(omelete)
-        recipesList.append(panquecaAmericana)
-        recipesList.append(aveia)
-        recipesList.append(muffinDeBanana)
-        recipesList.append(cafeGelado)
+        recipesList.append(omelete)                 // 0
+        recipesList.append(panquecaAmericana)       // 1
+        recipesList.append(aveia)                   // 2
+        recipesList.append(muffinDeBanana)          // 3
+        recipesList.append(cafeGelado)              // 4
         
         // lunch
-        recipesList.append(arroz)
-        recipesList.append(almondegas)
-        recipesList.append(strogonoff)
-        recipesList.append(panqueca)
-        recipesList.append(macarrao)
+        recipesList.append(arroz)                   // 5
+        recipesList.append(almondegas)              // 6
+        recipesList.append(strogonoff)              // 7
+        recipesList.append(panqueca)                // 8
+        recipesList.append(macarrao)                // 9
         
         // desert
-        recipesList.append(brigadeirao)
-        recipesList.append(copinhosChocolate)
-        recipesList.append(mouseChocolateVegano)
-        recipesList.append(brigadeiro)
-        recipesList.append(mouseMaracuja)
+        recipesList.append(brigadeirao)             // 10
+        recipesList.append(copinhosChocolate)       // 11
+        recipesList.append(mouseChocolateVegano)    // 12
+        recipesList.append(brigadeiro)              // 13
+        recipesList.append(mouseMaracuja)           // 14
     }
 }

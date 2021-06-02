@@ -22,7 +22,7 @@ class CleaningViewModel: ObservableObject {
         
         let lavarRoupa = CleaningTipModel(
             title: "Dicas para Lavar roupa",
-            imageName: "CleaningContent",
+            imageName: "ContentCleaning",
             category: .clothes,
             extendedTitle: nil,
             description: nil,
@@ -37,7 +37,7 @@ class CleaningViewModel: ObservableObject {
         
         let tirarMachas = CleaningTipModel(
             title: "Como tirar manchas da roupa",
-            imageName: "CleaningContent",
+            imageName: "ContentCleaning",
             category: .clothes,
             extendedTitle: "Como tirar manchas da roupa",
             description: "Antes de iniciar o processo de lavagem, seja à mão ou na máquina de lavar, é necessário assegurar a remoção das manchas."
@@ -51,7 +51,7 @@ class CleaningViewModel: ObservableObject {
         
         let limpezaVidros = CleaningTipModel(
             title: "Limpeza de Vidros",
-            imageName: "CleaningContent",
+            imageName: "ContentCleaning",
             category: .house,
             extendedTitle: nil,
             description: "Para adquirir uma boa aparência, as janelas e vidros necessitam de uma limpeza regular. O ideal é que a limpeza seja feita mensalmente.",
@@ -62,7 +62,7 @@ class CleaningViewModel: ObservableObject {
         
         let limpezaQuarto = CleaningTipModel(
             title: "Rotina Limpeza Quarto",
-            imageName: "CleaningContent",
+            imageName: "ContentCleaning",
             category: .house,
             extendedTitle: nil,
             description: "O quarto é um cômodo da casa que precisa de atenção quando o assunto é limpeza. Isso porque o local também acumula sujeiras e ácaros, que afetam o bem-estar e a saúde respiratória de quem dorme no ambiente. E para evitar que isso aconteça, é necessário definir uma rotina de limpeza.",
@@ -72,11 +72,11 @@ class CleaningViewModel: ObservableObject {
                            "Aplique o limpa vidros e seque para finalizar."])
         
         // limpeza roupa
-        cleaningTipsList.append(lavarRoupa)
-        cleaningTipsList.append(tirarMachas)
+        cleaningTipsList.append(lavarRoupa)         // 0
+        cleaningTipsList.append(tirarMachas)        // 1
         
         // limpeza casa
-        cleaningTipsList.append(limpezaVidros)
-        cleaningTipsList.append(limpezaQuarto)
+        cleaningTipsList.append(limpezaVidros)      // 2
+        cleaningTipsList.append(limpezaQuarto)      // 3
     }
 }
