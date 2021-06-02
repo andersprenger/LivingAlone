@@ -15,7 +15,7 @@ enum OrganizingCategories: String, Equatable, CaseIterable {
 struct OrganizingTipModel: Tip {
     var id: UUID = UUID()
 
-    var topic: Topic
+    var topic: Topic = .organizing
     var title: String
     var imageName: String
     

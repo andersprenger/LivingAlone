@@ -18,7 +18,7 @@ enum CookingCategories: String, Equatable, CaseIterable {
 struct RecipeModel: Tip {
     var id: UUID = UUID()
     
-    var topic: Topic = Topic.cooking
+    var topic: Topic = .cooking
     var title: String
     var imageName: String
 

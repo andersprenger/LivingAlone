@@ -9,15 +9,16 @@ import SwiftUI
 
 struct CleaningView: View {
     @Environment (\.presentationMode) private var presentationMode
+    @ObservedObject var viewModel: CleaningViewModel
     
-    @State var selection: CleaningCategories = .bedroom
-    @State var showDetails: Bool = false
+    @State private var pickerSelection: CleaningCategories = .clothes
+    @State private var sheetSelection: CleaningTipModel?
     
     var body: some View {
         VStack {
             ZStack {
                 HStack {
-                    Text("\(Image(systemName: "chevron.backward")) Back")
+                    Text("\(Image(systemName: "chevron.backward")) Voltar")
                         .padding(.leading)
                         .foregroundColor(Color("CleaningColor"))
                         .onTapGesture {
@@ -27,19 +28,16 @@ struct CleaningView: View {
                     Spacer()
                 }
                 
-                Text("Cleaning")
+                Text("Limpeza")
                     .font(.system(size: 32, weight: .bold))
             }
             
-            Picker("Cleaning", selection: $selection) {
-                Text("Bedroom")
-                    .tag(CleaningCategories.bedroom)
+            Picker("Cleaning", selection: $pickerSelection) {
+                Text("Casa")
+                    .tag(CleaningCategories.house)
                 
-                Text("Bathroom")
-                    .tag(CleaningCategories.bathroom)
-                
-                Text("Kitchen")
-                    .tag(CleaningCategories.kitchen)
+                Text("Roupas")
+                    .tag(CleaningCategories.clothes)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
@@ -48,18 +46,18 @@ struct CleaningView: View {
             }
             
             ScrollView {
-                ForEach (0 ..< 10) { _ in
-                    CleaningCard()
+                ForEach (viewModel.filterCleaningTips(category: pickerSelection)) { tip in
+                    CleaningCard(tip: tip)
                         .padding(.horizontal)
-                }
-                .sheet(isPresented: $showDetails, content: {
-                    CleaningDetails()
-                })
-                .onTapGesture {
-                    showDetails.toggle()
+                        .onTapGesture {
+                            sheetSelection = tip
+                        }
                 }
             }
-            
+            .sheet(item: $sheetSelection) { tip in
+                CleaningDetails(tip: tip)
+            }
+
             Spacer()
         }
         .navigationBarHidden(true)
@@ -69,6 +67,6 @@ struct CleaningView: View {
 
 struct CleaningView_Previews: PreviewProvider {
     static var previews: some View {
-        CleaningView()
+        CleaningView(viewModel: CleaningViewModel())
     }
 }

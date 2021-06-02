@@ -44,7 +44,7 @@ struct CookingCard: View {
 
 struct CookingCard_Previews: PreviewProvider {
     static var previews: some View {
-        CookingCard(recipe: ViewModel.shared.recipesList[0])
+        CookingCard(recipe: CookingViewModel().recipesList[0])
             .previewLayout(.fixed(width: 370, height: 153))
     }
 }

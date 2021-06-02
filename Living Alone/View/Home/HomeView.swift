@@ -10,6 +10,10 @@ import SwiftUI
 struct HomeView: View {
     @State private var isSearching = false
     
+    @ObservedObject private var cookingViewModel: CookingViewModel = CookingViewModel()
+    @ObservedObject private var cleaningViewModel: CleaningViewModel = CleaningViewModel()
+    @ObservedObject private var organizingViewModel: OrganizingViewModel = OrganizingViewModel()
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -18,22 +22,22 @@ struct HomeView: View {
                         .padding()
                     
                     HStack (alignment: .center) {
-                        NavigationLink (destination: CookingView()){
+                        NavigationLink (destination: CookingView(viewModel: cookingViewModel)){
                             HomeCookingButton()
                         }
                         
-                        NavigationLink (destination: CleaningView()){
+                        NavigationLink (destination: CleaningView(viewModel: cleaningViewModel)){
                             HomeCleaningButton()
                         }
                         
                         
-                        NavigationLink (destination: OrganizingView()){
+                        NavigationLink (destination: OrganizingView(viewModel: organizingViewModel)){
                             HomeOrganizationButton()
                         }
                     }
                     
                     VStack (alignment: .leading) {
-                        Text("Cleaning")
+                        Text("Cozinha")
                             .font(.system(size: 18, weight: .bold))
                             .padding(.leading)
                         
@@ -56,7 +60,7 @@ struct HomeView: View {
                     .padding(.vertical)
                     
                     VStack (alignment: .leading) {
-                        Text("Cleaning")
+                        Text("Limpeza")
                             .font(.system(size: 18, weight: .bold))
                             .padding(.leading)
                         
@@ -75,7 +79,7 @@ struct HomeView: View {
                     .padding(.vertical)
                     
                     VStack (alignment: .leading) {
-                        Text("Organization")
+                        Text("Organização")
                             .font(.system(size: 18, weight: .bold))
                             .padding(.leading)
                         

@@ -10,14 +10,16 @@ import SwiftUI
 struct OrganizingView: View {
     @Environment (\.presentationMode) private var presentationMode
     
-    @State var selection: OrganizingCategories = .bedroom
-    @State var showDetails: Bool = false
+    @ObservedObject var viewModel: OrganizingViewModel
+    
+    @State private var pickerSelection: OrganizingCategories = .bedroom
+    @State private var sheetSelection: OrganizingTipModel?
 
     var body: some View {
         VStack {
             ZStack {
                 HStack {
-                    Text("\(Image(systemName: "chevron.backward")) Back")
+                    Text("\(Image(systemName: "chevron.backward")) Voltar")
                         .padding(.leading)
                         .foregroundColor(Color("OrganizingColor"))
                         .onTapGesture {
@@ -27,15 +29,15 @@ struct OrganizingView: View {
                     Spacer()
                 }
                 
-                Text("Organizing")
+                Text("Organização")
                     .font(.system(size: 32, weight: .bold))
             }
             
-            Picker("Cooking", selection: $selection) {
-                Text("Bedroom")
+            Picker("Cooking", selection: $pickerSelection) {
+                Text("Quarto")
                     .tag(OrganizingCategories.bedroom)
                 
-                Text("Closet")
+                Text("Guarda-Roupas")
                     .tag(OrganizingCategories.closet)
             }
             .pickerStyle(SegmentedPickerStyle())
@@ -45,16 +47,16 @@ struct OrganizingView: View {
             }
             
             ScrollView {
-                ForEach (0 ..< 10) { _ in
-                    OrganizingCard()
+                ForEach (viewModel.filterOrganinzingTips(category: pickerSelection)) { tip in
+                    OrganizingCard(tip: tip)
                         .padding(.horizontal)
+                        .onTapGesture {
+                            sheetSelection = tip
+                        }
                 }
-                .sheet(isPresented: $showDetails, content: {
-                    OrganizingDetails()
-                })
-                .onTapGesture {
-                    showDetails.toggle()
-                }
+            }
+            .sheet(item: $sheetSelection) { tip in
+                OrganizingDetails(tip: tip)
             }
             
             Spacer()
@@ -66,6 +68,6 @@ struct OrganizingView: View {
 
 struct OrganizingView_Previews: PreviewProvider {
     static var previews: some View {
-        OrganizingView()
+        OrganizingView(viewModel: OrganizingViewModel())
     }
 }

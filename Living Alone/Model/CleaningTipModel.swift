@@ -9,15 +9,14 @@ import Foundation
 import SwiftUI
 
 enum CleaningCategories: String, Equatable, CaseIterable {
-    case bedroom = "Bedroom"
-    case bathroom = "Bathroom"
-    case kitchen = "Kitchen"
+    case clothes = "Roupas"
+    case house = "Casa"
 }
 
 struct CleaningTipModel: Tip {
     var id: UUID = UUID()
 
-    var topic: Topic = Topic.cleaning
+    var topic: Topic = .cleaning
     var title: String
     var imageName: String
     

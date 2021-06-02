@@ -113,6 +113,6 @@ struct CookingDetails: View {
 
 struct CookingDetails_Previews: PreviewProvider {
     static var previews: some View {
-        CookingDetails(recipe: ViewModel.shared.recipesList[0])
+        CookingDetails(recipe: CookingViewModel().recipesList[0])
     }
 }

@@ -11,7 +11,7 @@
 		7118AE2926631B9E00FDFD06 /* CleaningTipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2826631B9E00FDFD06 /* CleaningTipModel.swift */; };
 		7118AE2B26631BB200FDFD06 /* OrganizingTipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2A26631BB200FDFD06 /* OrganizingTipModel.swift */; };
 		7118AE2D26631BC800FDFD06 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2C26631BC800FDFD06 /* Tip.swift */; };
-		7118AE2F26632BA900FDFD06 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2E26632BA900FDFD06 /* ViewModel.swift */; };
+		7118AE2F26632BA900FDFD06 /* CookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118AE2E26632BA900FDFD06 /* CookingViewModel.swift */; };
 		71F6009326606C5600109994 /* LivingAloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6009226606C5600109994 /* LivingAloneApp.swift */; };
 		71F6009526606C5600109994 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F6009426606C5600109994 /* ContentView.swift */; };
 		71F6009726606C5800109994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F6009626606C5800109994 /* Assets.xcassets */; };
@@ -43,6 +43,8 @@
 		71F600E126614DA200109994 /* CookingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600E026614DA200109994 /* CookingDetails.swift */; };
 		71F600E326614DAC00109994 /* CleaningDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600E226614DAC00109994 /* CleaningDetails.swift */; };
 		71F600E526614DB700109994 /* OrganizingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F600E426614DB700109994 /* OrganizingDetails.swift */; };
+		71FCE14026682D23008FAACD /* CleaningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FCE13F26682D23008FAACD /* CleaningViewModel.swift */; };
+		71FCE14226682D2D008FAACD /* OrganizingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FCE14126682D2D008FAACD /* OrganizingViewModel.swift */; };
 		D0E23C2DACCBA1D1F798CCB3 /* Pods_Living_Alone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F635CE9903D11EAD7E66EE1 /* Pods_Living_Alone.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +54,7 @@
 		7118AE2826631B9E00FDFD06 /* CleaningTipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningTipModel.swift; sourceTree = "<group>"; };
 		7118AE2A26631BB200FDFD06 /* OrganizingTipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizingTipModel.swift; sourceTree = "<group>"; };
 		7118AE2C26631BC800FDFD06 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
-		7118AE2E26632BA900FDFD06 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7118AE2E26632BA900FDFD06 /* CookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingViewModel.swift; sourceTree = "<group>"; };
 		71F6008F26606C5600109994 /* Living Alone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Living Alone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F6009226606C5600109994 /* LivingAloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingAloneApp.swift; sourceTree = "<group>"; };
 		71F6009426606C5600109994 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,8 @@
 		71F600E026614DA200109994 /* CookingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingDetails.swift; sourceTree = "<group>"; };
 		71F600E226614DAC00109994 /* CleaningDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningDetails.swift; sourceTree = "<group>"; };
 		71F600E426614DB700109994 /* OrganizingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizingDetails.swift; sourceTree = "<group>"; };
+		71FCE13F26682D23008FAACD /* CleaningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningViewModel.swift; sourceTree = "<group>"; };
+		71FCE14126682D2D008FAACD /* OrganizingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizingViewModel.swift; sourceTree = "<group>"; };
 		7F635CE9903D11EAD7E66EE1 /* Pods_Living_Alone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Living_Alone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5EE72BF135E9FA7C95E4FFA /* Pods-Living Alone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Living Alone.release.xcconfig"; path = "Target Support Files/Pods-Living Alone/Pods-Living Alone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,7 +188,9 @@
 		71F600A326606F0400109994 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7118AE2E26632BA900FDFD06 /* ViewModel.swift */,
+				7118AE2E26632BA900FDFD06 /* CookingViewModel.swift */,
+				71FCE13F26682D23008FAACD /* CleaningViewModel.swift */,
+				71FCE14126682D2D008FAACD /* OrganizingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -411,8 +417,9 @@
 				7118AE2926631B9E00FDFD06 /* CleaningTipModel.swift in Sources */,
 				7118AE2D26631BC800FDFD06 /* Tip.swift in Sources */,
 				71F600D32660A1B800109994 /* CookingView.swift in Sources */,
+				71FCE14026682D23008FAACD /* CleaningViewModel.swift in Sources */,
 				71F600CB2660942500109994 /* HomeCookingCard2.swift in Sources */,
-				7118AE2F26632BA900FDFD06 /* ViewModel.swift in Sources */,
+				7118AE2F26632BA900FDFD06 /* CookingViewModel.swift in Sources */,
 				71F600E326614DAC00109994 /* CleaningDetails.swift in Sources */,
 				71F600B726607DC300109994 /* HomeView.swift in Sources */,
 				71F600BC2660878B00109994 /* HomeCleaningCard2.swift in Sources */,
@@ -433,6 +440,7 @@
 				71F600A626606F4600109994 /* YouTubePlayer.swift in Sources */,
 				71F600E126614DA200109994 /* CookingDetails.swift in Sources */,
 				71F600CF2660943800109994 /* HomeCookingCard4.swift in Sources */,
+				71FCE14226682D2D008FAACD /* OrganizingViewModel.swift in Sources */,
 				71F600D52660A1C600109994 /* CleaningView.swift in Sources */,
 				71F600A82660711000109994 /* SearchBar.swift in Sources */,
 				71F600D12660944100109994 /* HomeCookingCard5.swift in Sources */,

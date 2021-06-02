@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct CleaningCard: View {
+    var tip: CleaningTipModel
+    
     var body: some View {
         ZStack {
             Color("CleaningColor")
             
             VStack (alignment: .leading, spacing: 5) {
-                Text("Limpeza de Vidros")
+                Text(tip.title)
                     .font(.system(size: 24, weight: .bold))
                 
-                Text ("Os passos para a limpeza dos vidros são bastante simples. A forma e a ordem em que são feitos é que...")
+                Text (tip.description ?? tip.instructions[0])
                     .font(.system(size: 14, weight: .regular))
                     .frame(height: 40)
             }
@@ -30,7 +32,7 @@ struct CleaningCard: View {
 
 struct CleaningCard_Previews: PreviewProvider {
     static var previews: some View {
-        CleaningCard()
+        CleaningCard(tip: CleaningViewModel().cleaningTipsList[0])
             .previewLayout(.fixed(width: 350, height: 153))
     }
 }

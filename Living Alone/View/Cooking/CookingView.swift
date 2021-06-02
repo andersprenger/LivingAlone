@@ -10,15 +10,16 @@ import SwiftUI
 struct CookingView: View {
     @Environment (\.presentationMode) private var presentationMode
     
+    @ObservedObject  var viewModel: CookingViewModel
+    
     @State private var pickerSelection: CookingCategories = .breakfest
-    @State private var showDetails: Bool = false
-    @State private var sheetSelection: RecipeModel = ViewModel.shared.recipesList[0]
+    @State private var sheetSelection: RecipeModel?
     
     var body: some View {
         VStack {
             ZStack {
                 HStack {
-                    Text("\(Image(systemName: "chevron.backward")) Back")
+                    Text("\(Image(systemName: "chevron.backward")) Voltar")
                         .padding(.leading)
                         .foregroundColor(Color("CookingColor"))
                         .onTapGesture {
@@ -28,18 +29,18 @@ struct CookingView: View {
                     Spacer()
                 }
                 
-                Text("Cooking")
+                Text("Cozinha")
                     .font(.system(size: 32, weight: .bold))
             }
             
             Picker("Cooking", selection: $pickerSelection) {
-                Text("Breakfest")
+                Text("Café da Manha")
                     .tag(CookingCategories.breakfest)
                 
-                Text("Lunch")
+                Text("Almoço")
                     .tag(CookingCategories.lunch)
                 
-                Text("Desert")
+                Text("Doces")
                     .tag(CookingCategories.desert)
             }
             .pickerStyle(SegmentedPickerStyle())
@@ -49,34 +50,27 @@ struct CookingView: View {
             }
             
             ScrollView {
-                ForEach (filterRecipes(category: pickerSelection)) { recipe in
+                ForEach (viewModel.filterRecipes(category: pickerSelection)) { recipe in
                     CookingCard(recipe: recipe)
                         .padding(.horizontal)
                         .onTapGesture {
-                            showDetails.toggle()
                             sheetSelection = recipe
                         }
                 }
             }
-            .sheet(isPresented: $showDetails, content: {
-                CookingDetails(recipe: sheetSelection)
-            })
+            .sheet(item: $sheetSelection) { recipe in
+                CookingDetails(recipe: recipe)
+            }
             
             Spacer()
         }
         .navigationBarHidden(true)
         .ignoresSafeArea(edges: .bottom)
     }
-    
-    func filterRecipes(category: CookingCategories) -> [RecipeModel] {
-        ViewModel.shared.recipesList.filter { recipe in
-            recipe.category == category
-        }
-    }
 }
 
 struct CookingView_Previews: PreviewProvider {
     static var previews: some View {
-        CookingView()
+        CookingView(viewModel: CookingViewModel())
     }
 }
