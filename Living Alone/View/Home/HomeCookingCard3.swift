@@ -35,7 +35,7 @@ struct HomeCookingCard3: View {
                             .frame(width: 100, height: 41, alignment: .center)
                             .padding(.leading, 10)
                         
-                        Text("\(50) min")
+                        Text("\(60) min")
                             .font(.system(size: 16, weight: .regular))
                             .foregroundColor(.white)
                             .multilineTextAlignment(.leading)
