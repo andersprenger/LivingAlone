@@ -239,7 +239,7 @@ class CookingViewModel: ObservableObject {
             category: .desert,
             time: 120,
             servings: 3,
-            vegan: false,
+            vegan: true,
             ingredients: ["1 abacate maduro",
                           "2 colheres (sopa) de cacau em pó",
                           "1 pitada de canela em pó",
