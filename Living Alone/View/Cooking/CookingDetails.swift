@@ -37,6 +37,7 @@ struct CookingDetails: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width, height: 252)
+                    .clipped()
                 
                 HStack {
                     ZStack {
@@ -112,6 +113,6 @@ struct CookingDetails: View {
 
 struct CookingDetails_Previews: PreviewProvider {
     static var previews: some View {
-        CookingDetails(recipe: CookingViewModel().recipesList[8])
+        CookingDetails(recipe: CookingViewModel().recipesList[2])
     }
 }

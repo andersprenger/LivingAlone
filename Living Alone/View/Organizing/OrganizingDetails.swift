@@ -37,6 +37,7 @@ struct OrganizingDetails: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width, height: 252)
+                    .clipped()
 
                 VStack(alignment: .leading) {
                     if tip.extendedTitle != nil {
