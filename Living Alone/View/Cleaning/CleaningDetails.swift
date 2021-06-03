@@ -21,6 +21,7 @@ struct CleaningDetails: View {
                         
                         Text(tip.title)
                             .font(.system(size: 17, weight: .bold))
+                            .multilineTextAlignment(.center)
                         
                         Spacer()
                     }
