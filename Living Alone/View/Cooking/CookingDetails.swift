@@ -16,8 +16,16 @@ struct CookingDetails: View {
         ScrollView {
             VStack (alignment: .leading, spacing: 0){
                 ZStack {
-                    Text(recipe.title)
-                        .font(.system(size: 17, weight: .bold))
+                    HStack {
+                        Spacer()
+                        
+                        Text(recipe.title)
+                            .font(.system(size: 17, weight: .bold))
+                        
+                        Spacer()
+                    }
+                    .padding(.horizontal, 30)
+                    // esse pading impede o title de invadir o espaço do ok
                     
                     HStack {
                         Spacer()
