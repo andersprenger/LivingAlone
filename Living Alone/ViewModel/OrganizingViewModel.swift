@@ -16,6 +16,12 @@ class OrganizingViewModel: ObservableObject {
         }
     }
     
+    func search(text: String) -> [OrganizingTipModel]{
+        organizingTipsList.filter { tip in // FIXME: -- improve this
+            tip.title.contains(text)
+        }
+    }
+    
     init() { // inserir dados abaixo!
         
         // MARK: -- Organização
