@@ -16,12 +16,6 @@ class CleaningViewModel: ObservableObject {
         }
     }
     
-    func search(text: String) -> [CleaningTipModel]{
-        cleaningTipsList.filter { tip in // FIXME: -- improve this
-            tip.title.contains(text)
-        }
-    }
-    
     init() { // inserir dados abaixo!
                
         // MARK: -- limpeza roupa

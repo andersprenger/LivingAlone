@@ -16,12 +16,6 @@ class CookingViewModel: ObservableObject {
         }
     }
     
-    func search(text: String) -> [RecipeModel]{
-        recipesList.filter { recipe in // FIXME: -- improve this
-            recipe.title.contains(text)
-        }
-    }
-    
     init() { // inserir dados abaixo!
         
         // MARK: -- breakfests
